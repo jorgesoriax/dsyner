@@ -4,7 +4,7 @@ const theme = extendTheme({
   colors: {
   },
   fonts: {
-    heading: `"Inter", sans-serif`,
+    heading: `"Poppins", sans-serif`,
     body: `"Inter", sans-serif`,
   },
   config: {
@@ -14,7 +14,7 @@ const theme = extendTheme({
   styles: {
     global: (props) => ({
       "html, body": {
-        color: props.colorMode === "dark" ? "white" : "gray.800",
+        // color: props.colorMode === "dark" ? "white" : "gray.00",
         fontSize: 16,
       },
       html: {

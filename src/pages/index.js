@@ -1,3 +1,5 @@
+import Navbar from "@/components/Navbar";
+import { Container } from "@chakra-ui/react";
 import Head from "next/head";
 
 export default function Home() {
@@ -9,9 +11,17 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        Start...
-      </main>
+      <Container maxW="container.lg" border="1px solid red" p={4}>
+        <Navbar/>
+        {/* Navbar */}
+        {/* Hero */}
+        {/* Feature */}
+        {/* Process */}
+        {/* Princing */}
+        {/* FAQ */}
+        {/* Contact */}
+        {/* Footer */}
+      </Container>
     </>
   );
 }

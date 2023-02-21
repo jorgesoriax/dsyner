@@ -68,7 +68,12 @@ export default function Navbar() {
   };
 
   return (
-    <HStack w="100%" align="center" justify="space-between">
+    <HStack
+      w="100%"
+      h={{ base: "100px", md: "75px" }}
+      align="center"
+      justify="space-between"
+    >
       {/* logo */}
       <Flex boxSize="50px" justify="center" align="center">
         <Image src="./favicon.ico" h="35px" />

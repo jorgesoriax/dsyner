@@ -4,17 +4,17 @@ const theme = extendTheme({
   colors: {
   },
   fonts: {
-    heading: `"Poppins", sans-serif`,
-    body: `"Inter", sans-serif`,
+    heading: `"Cabinet Grotesk", sans-serif`,
+    body: `"Poppins", sans-serif`,
   },
   config: {
     initialColorMode: "dark",
-    useSystemColorMode: false,
+    useSystemColorMode: false
   },
   styles: {
     global: (props) => ({
       "html, body": {
-        // color: props.colorMode === "dark" ? "white" : "gray.00",
+        backgroundColor: props.colorMode === "dark" ? "#1D1D1D" : "white",
         fontSize: 16,
       },
       html: {

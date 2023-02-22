@@ -1,7 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/sections/Hero";
-import { Container } from "@chakra-ui/react";
+import { Box, Container, Text } from "@chakra-ui/react";
 import Head from "next/head";
+import { Element } from "react-scroll";
 
 export default function Home() {
   return (
@@ -12,10 +13,39 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container maxW="container.lg" px={4}>
-        <Navbar/>
+      <Container
+        maxW="container.lg"
+        px={{ base: 6, md: 4 }}
+      >
+        <Navbar />
         {/* Hero */}
-        <Hero/>
+        <Hero />
+        <Box>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text>Scrollea más abajo...</Text>
+          <Text id="test">Has llegado</Text>
+        </Box>
         {/* Feature */}
         {/* Process */}
         {/* Princing */}

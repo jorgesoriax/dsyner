@@ -1,6 +1,6 @@
 import {
   Box,
-  Button,
+  calc,
   Heading,
   Highlight,
   HStack,
@@ -14,13 +14,16 @@ import {
   ArrowLongDownIcon,
   SparklesIcon,
 } from "@heroicons/react/24/solid";
+import { Link } from "react-scroll";
+import Button from "../Button";
+import ScrollButton from "../ScrollButton";
 
 export default function Hero() {
   const TextContent = () => {
     return (
-      <VStack w="100%" align="left" spacing={4}>
-        <Heading as="h1" size="4xl" lineHeight="none" fontWeight="bold" mb={8}>
-          <Highlight query={["hoy", "mismo"]} styles={{ color: "cyan.400" }}>
+      <VStack w="100%" align={{ base: "center", md: "left" }} spacing={4}>
+        <Heading as="h1" size={{base: "3xl", md: "4xl"}} lineHeight="none" fontWeight="bold" mb={8} textAlign={{base: "center"}}>
+          <Highlight query={["hoy", "mismo"]} styles={{ color: "brand.200" }}>
             Consigue hoy mismo tu nueva marca
           </Highlight>
         </Heading>
@@ -28,7 +31,7 @@ export default function Hero() {
           <Text color="gray">Servicio de diseño gráfico potenciado por IA</Text>
           <SparklesIcon width={18} height={18} color="gray" />
         </HStack>
-        <Text fontSize="1xl">
+        <Text fontSize="1xl" textAlign={{ base: "center" }}>
           Facilitamos la toma de decisión en la creación de la marca de tu
           negocio. Facilitamos la toma de decisión en la creación de la marca de
           tu negocio.
@@ -38,21 +41,28 @@ export default function Hero() {
   };
   const Actions = () => {
     return (
-      <HStack w="100%" justify="left" spacing={8}>
+      <Stack
+        direction={{ base: "column", md: "row" }}
+        w="100%"
+        justify={{ base: "center", md: "left" }}
+        spacing={{base: 4, md: 8}}
+      >
         <Button>Get started</Button>
-        <Button
+        <ScrollButton
+          to="test"
+          w="100%"
           variant="ghost"
           rightIcon={<ArrowDownIcon width={18} height={18} />}
         >
           Muéstrame cómo funciona
-        </Button>
-      </HStack>
+        </ScrollButton>
+      </Stack>
     );
   };
   const Graphic = () => {
     return (
-      <Box borderRadius="2xl" overflow="hidden">
-        <Image boxSize="500px" src="static\images\temp.png" alt="temp"/>
+      <Box borderRadius="2xl" overflow="hidden" display={{ base: "none", md: "flex" }}>
+        <Image boxSize="500px" src="static\images\temp.png" alt="temp" />
       </Box>
     );
   };
@@ -60,9 +70,10 @@ export default function Hero() {
     return (
       <VStack
         as="section"
-        h={{ base: "calc(100vh - 100px)", md: "calc(100vh - 75px)" }}
+        h={{ base: "auto", md: "calc(100vh - 82px)" }}
         align="left"
         justify="center"
+        pt={{base: 16, md: 0}}
       >
         {children}
       </VStack>
@@ -71,12 +82,15 @@ export default function Hero() {
 
   return (
     <HeroContainer>
-      <Stack direction="row" spacing={24}>
-        <VStack w="45%" spacing={24}>
+      <Stack
+        direction={{ base: "column", md: "row" }}
+        spacing={24}
+      >
+        <VStack w={{ base: "100%", md: "45%" }} spacing={{base: 12, md: 24}}>
           <TextContent />
           <Actions />
         </VStack>
-        <VStack w="55%">
+        <VStack w={{ base: "100%", md: "55%" }}>
           <Graphic />
         </VStack>
       </Stack>

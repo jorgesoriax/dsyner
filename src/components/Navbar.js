@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Box,
-  Button,
   chakra,
   Drawer,
   DrawerBody,
@@ -26,6 +25,7 @@ const data = {
   cta: "Get started",
 };
 import { Bars3BottomRightIcon } from "@heroicons/react/24/solid";
+import Button from "./Button";
 
 export default function Navbar() {
   const MobileDrawer = () => {
@@ -40,6 +40,7 @@ export default function Navbar() {
           onClick={onOpen}
           icon={<Bars3BottomRightIcon />}
           p={2}
+          rounded="full"
         />
         <Drawer
           isOpen={isOpen}
@@ -68,12 +69,7 @@ export default function Navbar() {
   };
 
   return (
-    <HStack
-      w="100%"
-      h={{ base: "100px", md: "75px" }}
-      align="center"
-      justify="space-between"
-    >
+    <HStack as="nav" w="100%" py={4} align="center" justify="space-between">
       {/* logo */}
       <Flex boxSize="50px" justify="center" align="center">
         <Image src="./favicon.ico" h="35px" />

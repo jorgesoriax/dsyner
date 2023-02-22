@@ -1,8 +1,8 @@
-import { Button as ChakraButton } from "@chakra-ui/react";
+import { Button } from "@chakra-ui/react";
 
-export default function Button({ children, ...props }) {
+export default function RoundedButton({ children, ...props }) {
   return (
-    <ChakraButton
+    <Button
       {...props}
       borderRadius="full"
       px={6}
@@ -11,6 +11,6 @@ export default function Button({ children, ...props }) {
       colorScheme="brand"
     >
       {children}
-    </ChakraButton>
+    </Button>
   );
 }

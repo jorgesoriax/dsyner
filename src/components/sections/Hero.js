@@ -15,8 +15,8 @@ import {
   SparklesIcon,
 } from "@heroicons/react/24/solid";
 import { Link } from "react-scroll";
-import Button from "../Button";
-import ScrollButton from "../ScrollButton";
+import RoundedButton from "../RoundedButton";
+import RoundedScrollButton from "../RoundedScrollButton";
 
 export default function Hero() {
   const TextContent = () => {
@@ -47,15 +47,15 @@ export default function Hero() {
         justify={{ base: "center", md: "left" }}
         spacing={{base: 4, md: 8}}
       >
-        <Button>Get started</Button>
-        <ScrollButton
+        <RoundedButton>Get started</RoundedButton>
+        <RoundedScrollButton
           to="test"
           w="100%"
           variant="ghost"
           rightIcon={<ArrowDownIcon width={18} height={18} />}
         >
           Muéstrame cómo funciona
-        </ScrollButton>
+        </RoundedScrollButton>
       </Stack>
     );
   };

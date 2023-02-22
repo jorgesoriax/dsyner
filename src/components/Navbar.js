@@ -25,7 +25,7 @@ const data = {
   cta: "Get started",
 };
 import { Bars3BottomRightIcon } from "@heroicons/react/24/solid";
-import Button from "./Button";
+import RoundedButton from "./RoundedButton";
 
 export default function Navbar() {
   const MobileDrawer = () => {
@@ -55,9 +55,9 @@ export default function Navbar() {
             <DrawerBody>
               <VStack>
                 {data.links.map((item, i) => (
-                  <Button key={i} variant="ghost">
+                  <RoundedButton key={i} variant="ghost">
                     {item}
-                  </Button>
+                  </RoundedButton>
                 ))}
               </VStack>
             </DrawerBody>
@@ -77,14 +77,14 @@ export default function Navbar() {
       {/* links */}
       <HStack display={{ base: "none", md: "flex" }}>
         {data.links.map((item, i) => (
-          <Button key={i} variant="ghost">
+          <RoundedButton key={i} variant="ghost">
             {item}
-          </Button>
+          </RoundedButton>
         ))}
       </HStack>
       {/* cta */}
       <HStack>
-        <Button>{data.cta}</Button>
+        <RoundedButton>{data.cta}</RoundedButton>
         <MobileDrawer />
       </HStack>
     </HStack>

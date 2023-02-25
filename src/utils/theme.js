@@ -16,7 +16,7 @@ const theme = extendTheme({
     }
   },
   fonts: {
-    heading: `"Cabinet Grotesk", sans-serif`,
+    heading: `"Cabinet Grotesk", sans`,
     body: `"Poppins", sans-serif`,
   },
   config: {

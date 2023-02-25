@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "env": "code . && start chrome http://localhost:3000/ && npm run dev",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -12,6 +13,7 @@
     "@chakra-ui/react": "^2.5.1",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@fontsource/poppins": "^4.5.10",
     "@heroicons/react": "^2.0.15",
     "@next/font": "13.1.6",
     "framer-motion": "^9.0.4",

@@ -23,7 +23,7 @@ export default function Hero() {
     return (
       <VStack w="100%" align={{ base: "center", md: "left" }} spacing={4}>
         <Heading as="h1" size={{base: "3xl", md: "4xl"}} lineHeight="none" fontWeight="bold" mb={8} textAlign={{base: "center"}}>
-          <Highlight query={["hoy", "mismo"]} styles={{ color: "brand.200" }}>
+          <Highlight query={["hoy", "mismo"]} styles={{ color: "brand.400" }}>
             Consigue hoy mismo tu nueva marca
           </Highlight>
         </Heading>

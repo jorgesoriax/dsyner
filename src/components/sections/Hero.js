@@ -36,7 +36,9 @@ export default function Hero() {
           </Highlight>
         </Heading>
         <HStack>
-          <Description>Servicio de diseño gráfico potenciado por IA</Description>
+          <Description>
+            Servicio de diseño gráfico potenciado por IA
+          </Description>
           <SparklesIcon width={18} height={18} color="gray" />
         </HStack>
         <Text fontSize="1xl" textAlign={{ base: "center" }}>

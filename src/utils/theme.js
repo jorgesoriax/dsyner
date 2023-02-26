@@ -13,7 +13,9 @@ const theme = extendTheme({
       700: "#4b1ad0",
       800: "#3812ca",
       900: "#1001bc"
-    }
+    },
+    dark: "#292929",
+    deepDark: "#1d1d1d"
   },
   fonts: {
     heading: `"Cabinet Grotesk", sans`,

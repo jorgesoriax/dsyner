@@ -1,6 +1,9 @@
+import CrystalBox from "@/components/CrystalBox";
 import Navbar from "@/components/Navbar";
+import PriceCard from "@/components/PriceCard";
+import SectionHeader from "@/components/SectionHeader";
 import Hero from "@/components/sections/Hero";
-import { Box, Container, Text } from "@chakra-ui/react";
+import { Box, Container, HStack, Text, VStack } from "@chakra-ui/react";
 import Head from "next/head";
 import { Element } from "react-scroll";
 
@@ -13,39 +16,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Container
-        maxW="container.lg"
-        px={{ base: 6, md: 4 }}
-      >
+      <Container maxW="container.lg" px={{ base: 6, md: 4 }}>
         <Navbar />
-        {/* Hero */}
         <Hero />
-        <Box>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text>Scrollea más abajo...</Text>
-          <Text id="test">Has llegado</Text>
-        </Box>
+        <HStack>
+          <PriceCard />
+          <PriceCard />
+          <PriceCard />
+        </HStack>
         {/* Feature */}
         {/* Process */}
         {/* Princing */}

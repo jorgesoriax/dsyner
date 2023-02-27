@@ -8,7 +8,7 @@ export default function CrystalBox({ children, ...props }) {
       rounded="2xl"
       p="px"
     >
-      <Box boxSize="100%" rounded="2xl" bg="dark" p={6}>
+      <Box boxSize="100%" rounded="2xl" bg="altGray.dark" p={6}>
         {children}
       </Box>
     </Box>

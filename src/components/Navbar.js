@@ -1,7 +1,4 @@
-import React from "react";
 import {
-  Box,
-  chakra,
   Drawer,
   DrawerBody,
   DrawerCloseButton,
@@ -11,21 +8,21 @@ import {
   DrawerOverlay,
   Flex,
   HStack,
+  IconButton,
   Image,
-  Text,
   useDisclosure,
   VStack,
-  Link as ChakraLink,
-  IconButton,
 } from "@chakra-ui/react";
-import { Link } from "react-scroll";
+import { Bars3BottomRightIcon } from "@heroicons/react/24/solid";
+import React from "react";
+import { RoundedButton } from "./Buttons";
+import { LgContainer } from "./Containers";
+
 
 const data = {
   links: ["Option A", "Option B", "Option C"],
   cta: "Get started",
 };
-import { Bars3BottomRightIcon } from "@heroicons/react/24/solid";
-import RoundedButton from "./RoundedButton";
 
 export default function Navbar() {
   const MobileDrawer = () => {
@@ -67,14 +64,15 @@ export default function Navbar() {
       </Flex>
     );
   };
-
-  return (
-    <HStack as="nav" w="100%" py={4} align="center" justify="space-between">
-      {/* logo */}
+  const Logo = () => {
+    return (
       <Flex boxSize="50px" justify="center" align="center">
         <Image src="./favicon.ico" h="35px" />
       </Flex>
-      {/* links */}
+    );
+  };
+  const Links = () => {
+    return (
       <HStack display={{ base: "none", md: "flex" }}>
         {data.links.map((item, i) => (
           <RoundedButton key={i} variant="ghost">
@@ -82,11 +80,32 @@ export default function Navbar() {
           </RoundedButton>
         ))}
       </HStack>
-      {/* cta */}
+    );
+  };
+  const Actions = () => {
+    return (
       <HStack>
         <RoundedButton>{data.cta}</RoundedButton>
         <MobileDrawer />
       </HStack>
-    </HStack>
+    );
+  };
+
+  const NavbarContainer = ({ children }) => {
+    return (
+      <LgContainer as="nav" mb={0} py={0}>
+        <HStack py={4} align="center" justify="space-between">
+          {children}
+        </HStack>
+      </LgContainer>
+    );
+  };
+
+  return (
+    <NavbarContainer>
+      <Logo />
+      <Links />
+      <Actions />
+    </NavbarContainer>
   );
 }

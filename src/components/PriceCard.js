@@ -1,8 +1,8 @@
 import { HStack, List, ListItem, Stack, Text, VStack } from "@chakra-ui/react";
 import { CheckIcon } from "@heroicons/react/24/solid";
+import { RoundedButton } from "./Buttons";
 import CrystalBox from "./CrystalBox";
 import Description from "./Description";
-import RoundedButton from "./RoundedButton";
 
 export default function PriceCard() {
   const Header = () => {

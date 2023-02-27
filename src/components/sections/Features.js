@@ -7,6 +7,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { LgContainer } from "../Containers";
 import CrystalBox from "../CrystalBox";
 import SectionHeader from "../SectionHeader";
 
@@ -34,20 +35,8 @@ export default function Features() {
       </Stack>
     );
   };
-  const FeaturesContainer = ({ children }) => {
+  const FeatureGrid = () => {
     return (
-      <VStack as="section" spacing={24}>
-        {children}
-      </VStack>
-    );
-  };
-
-  return (
-    <FeaturesContainer>
-      <SectionHeader
-        title="Sed ut perspiciatis unde omnis"
-        description=" At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti."
-      />
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
         gap={16}
@@ -65,6 +54,23 @@ export default function Features() {
           <Feature />
         </GridItem>
       </Grid>
+    );
+  };
+  const FeaturesContainer = ({ children }) => {
+    return (
+      <LgContainer as="section">
+        <VStack>{children}</VStack>
+      </LgContainer>
+    );
+  };
+
+  return (
+    <FeaturesContainer>
+      <SectionHeader
+        title="Sed ut perspiciatis unde omnis"
+        description=" At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti."
+      />
+      <FeatureGrid />
     </FeaturesContainer>
   );
 }

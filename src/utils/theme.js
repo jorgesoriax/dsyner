@@ -2,7 +2,7 @@ import { extendTheme, useMediaQuery } from "@chakra-ui/react";
 
 const theme = extendTheme({
   colors: {
-    brand: {
+    violet: {
       50: "#efe6fb",
       100: "#d4c2f5",
       200: "#b89aef",
@@ -12,10 +12,14 @@ const theme = extendTheme({
       600: "#5d23d9",
       700: "#4b1ad0",
       800: "#3812ca",
-      900: "#1001bc"
+      900: "#1001bc",
     },
-    dark: "#292929",
-    deepDark: "#1d1d1d"
+    altGray: {
+      darker: "#1d1d1d",
+      dark: "#292929",
+      light: "#313131",
+      lighter: "#545454",
+    },
   },
   fonts: {
     heading: `"Cabinet Grotesk", sans`,
@@ -23,16 +27,16 @@ const theme = extendTheme({
   },
   config: {
     initialColorMode: "dark",
-    useSystemColorMode: false
+    useSystemColorMode: false,
   },
   styles: {
     global: (props) => ({
       "html, body": {
         backgroundColor: props.colorMode === "dark" ? "#1D1D1D" : "white",
         fontSize: 16,
-      }
+      },
     }),
-  }
+  },
 });
 
 export default theme;

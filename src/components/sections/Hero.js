@@ -1,6 +1,6 @@
 import {
   Box,
-  calc,
+  Flex,
   Heading,
   Highlight,
   HStack,
@@ -11,13 +11,11 @@ import {
 } from "@chakra-ui/react";
 import {
   ArrowDownIcon,
-  ArrowLongDownIcon,
   SparklesIcon,
 } from "@heroicons/react/24/solid";
-import { Link } from "react-scroll";
+import { RoundedButton, RoundedScrollButton } from "../Buttons";
+import { LgContainer } from "../Containers";
 import Description from "../Description";
-import RoundedButton from "../RoundedButton";
-import RoundedScrollButton from "../RoundedScrollButton";
 
 export default function Hero() {
   const TextContent = () => {
@@ -31,7 +29,7 @@ export default function Hero() {
           mb={8}
           textAlign={{ base: "center" }}
         >
-          <Highlight query={["hoy", "mismo"]} styles={{ color: "brand.400" }}>
+          <Highlight query={["hoy", "mismo"]} styles={{ color: "violet.400" }}>
             Consigue hoy mismo tu nueva marca
           </Highlight>
         </Heading>
@@ -75,36 +73,58 @@ export default function Hero() {
         borderRadius="2xl"
         overflow="hidden"
         display={{ base: "none", md: "flex" }}
+        h="100%"
       >
-        <Image boxSize="500px" src="static\images\temp.png" alt="temp" />
+        <Image src="static\images\temp.png" alt="temp" objectFit="cover" />
       </Box>
     );
   };
-  const HeroContainer = ({ children }) => {
+  const Left = ({ children }) => {
     return (
       <VStack
-        as="section"
-        h={{ base: "auto", md: "calc(100vh - 82px)" }}
-        align="left"
-        justify="center"
-        pt={{ base: 16, md: 0 }}
+        w={{ base: "100%", md: "45%" }}
+        spacing={{ base: 12, md: 24 }}
       >
         {children}
       </VStack>
     );
   };
+  const Right = ({ children }) => {
+    return (
+      <VStack w={{ base: "100%", md: "55%" }}>
+        {children}
+      </VStack>
+    );
+  };
+  const HeroContainer = ({ children }) => {
+    return (
+      <LgContainer
+        as="section"
+        h={{ base: "auto", md: "calc(100vh - 82px)" }}
+        pt={{ base: 16, md: 0 }}
+        pb={0}
+      >
+        <Flex h="100%" align="center">
+          <Stack
+            direction={{ base: "column", md: "row" }}
+            spacing={16}
+          >
+            {children}
+          </Stack>
+        </Flex>
+      </LgContainer>
+    );
+  };
 
   return (
     <HeroContainer>
-      <Stack direction={{ base: "column", md: "row" }} spacing={24}>
-        <VStack w={{ base: "100%", md: "45%" }} spacing={{ base: 12, md: 24 }}>
-          <TextContent />
-          <Actions />
-        </VStack>
-        <VStack w={{ base: "100%", md: "55%" }}>
-          <Graphic />
-        </VStack>
-      </Stack>
+      <Left>
+        <TextContent />
+        <Actions />
+      </Left>
+      <Right>
+        <Graphic />
+      </Right>
     </HeroContainer>
   );
 }

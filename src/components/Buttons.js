@@ -3,8 +3,9 @@ import { Link } from "react-scroll";
 
 export function RoundedButton({ children, ...props }) {
   const variantIsGhost = props.variant == "ghost";
+  const variantIsLink = props.variant == "link";
 
-  if (variantIsGhost) {
+  const GhostButton = () => {
     return (
       <DarkMode>
         <Button
@@ -21,7 +22,8 @@ export function RoundedButton({ children, ...props }) {
         </Button>
       </DarkMode>
     );
-  } else {
+  };
+  const BaseButton = () => {
     return (
       <LightMode>
         <Button
@@ -37,6 +39,21 @@ export function RoundedButton({ children, ...props }) {
         </Button>
       </LightMode>
     );
+  };
+  const LinkButton = () => {
+    return (
+      <Button minW="fit-content" fontWeight="normal" {...props}>
+        {children}
+      </Button>
+    );
+  };
+
+  if (variantIsGhost) {
+    return <GhostButton />;
+  } else if (variantIsLink) {
+    return <LinkButton />;
+  } else {
+    return <BaseButton />;
   }
 }
 

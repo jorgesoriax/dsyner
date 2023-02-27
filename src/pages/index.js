@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import CallToAction from "@/components/sections/CallToAction";
 import FAQ from "@/components/sections/FAQ";
@@ -23,6 +24,7 @@ export default function Home() {
       <Pricing />
       <FAQ />
       <CallToAction />
+      <Footer/>
     </>
   );
 }

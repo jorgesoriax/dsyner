@@ -17,6 +17,7 @@ import { Bars3BottomRightIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import { RoundedButton } from "./Buttons";
 import { LgContainer } from "./Containers";
+import Logo from "./Logo";
 
 
 const data = {
@@ -61,13 +62,6 @@ export default function Navbar() {
             <DrawerFooter />
           </DrawerContent>
         </Drawer>
-      </Flex>
-    );
-  };
-  const Logo = () => {
-    return (
-      <Flex boxSize="50px" justify="center" align="center">
-        <Image src="./favicon.ico" h="35px" />
       </Flex>
     );
   };

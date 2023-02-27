@@ -8,13 +8,14 @@ export function RoundedButton({ children, ...props }) {
     return (
       <DarkMode>
         <Button
-          {...props}
+          minW="fit-content"
           borderRadius="full"
           px={6}
           py={6}
           fontWeight="normal"
           colorScheme="violet"
           color="initial"
+          {...props}
         >
           {children}
         </Button>
@@ -24,12 +25,13 @@ export function RoundedButton({ children, ...props }) {
     return (
       <LightMode>
         <Button
-          {...props}
+          minW="fit-content"
           borderRadius="full"
           px={6}
           py={6}
           fontWeight="normal"
           colorScheme="violet"
+          {...props}
         >
           {children}
         </Button>

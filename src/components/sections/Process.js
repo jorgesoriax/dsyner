@@ -16,67 +16,23 @@ export default function Process() {
       <VStack spacing={16}>
         <Stack
           direction={{ base: "column", md: "row" }}
+          align="center"
           justify="center"
           spacing={8}
         >
-          <Box boxSize="250px" display="flex">
+          <Box boxSize={{ base: "200px", md: "250px" }} display="flex">
             <Image
+              boxSize="100%"
               src="./static/images/features/temp.png"
               alt="test"
               objectFit="cover"
             />
           </Box>
-          <VStack w="50%" justify="center" align="left">
-            <Heading>Sed ut perspiciatis unde omnis</Heading>
-            <Text>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-              ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-              non numquam eius modi tempora incidunt ut labore et dolore magnam
-              aliquam quaerat voluptatem.
-            </Text>
-          </VStack>
-        </Stack>
-        <Stack
-          direction={{ base: "column", md: "row-reverse" }}
-          justify="center"
-          spacing={8}
-        >
-          <Box boxSize="250px" display="flex">
-            <Image
-              src="./static/images/features/temp.png"
-              alt="test"
-              objectFit="cover"
-            />
-          </Box>
-          <VStack w="50%" justify="center" align="right">
-            <Heading textAlign="right">Sed ut perspiciatis unde omnis</Heading>
-            <Text textAlign="right">
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-              ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-              non numquam eius modi tempora incidunt ut labore et dolore magnam
-              aliquam quaerat voluptatem.
-            </Text>
-          </VStack>
-        </Stack>
-        <Stack
-          direction={{ base: "column", md: "row" }}
-          justify="center"
-          spacing={8}
-        >
-          <Box boxSize="250px" display="flex">
-            <Image
-              src="./static/images/features/temp.png"
-              alt="test"
-              objectFit="cover"
-            />
-          </Box>
-          <VStack w="50%" justify="center" align="left">
-            <Heading>Sed ut perspiciatis unde omnis</Heading>
-            <Text>
+          <VStack w={{ base: "100%", md: "50%" }} justify="center" align="left">
+            <Heading textAlign={{ base: "center", md: "left" }}>
+              Sed ut perspiciatis unde omnis
+            </Heading>
+            <Text textAlign={{ base: "center", md: "left" }}>
               Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
               aut fugit, sed quia consequuntur magni dolores eos qui ratione
               voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem

@@ -15,3 +15,11 @@ export function LgContainer({ children, ...props }) {
     </Container>
   );
 }
+
+export default function MdContainer({ children, ...props }) {
+  return (
+    <Container maxW="container.md" px={{ base: 8, md: 0 }} py={24} {...props}>
+      {children}
+    </Container>
+  );
+}

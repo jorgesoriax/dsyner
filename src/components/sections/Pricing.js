@@ -1,4 +1,4 @@
-import { HStack, VStack } from "@chakra-ui/react";
+import { HStack, Stack, VStack } from "@chakra-ui/react";
 import { LgContainer } from "../Containers";
 import PriceCard from "../PriceCard";
 import SectionHeader from "../SectionHeader";
@@ -6,11 +6,11 @@ import SectionHeader from "../SectionHeader";
 export default function Pricing() {
   const PriceCardsContainer = () => {
     return (
-      <HStack spacing={16}>
+      <Stack spacing={8} direction={{ base: "column", md: "row" }}>
         <PriceCard />
         <PriceCard />
         <PriceCard />
-      </HStack>
+      </Stack>
     );
   };
   const PricingContainer = ({ children }) => {

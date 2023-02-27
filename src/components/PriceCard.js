@@ -17,7 +17,7 @@ export default function PriceCard() {
   };
   const Features = () => {
     return (
-      <List w="100%" pb={16}>
+      <List w="100%" pb={{base: 8, md: 16}}>
         <ListItem>
           <HStack>
             <CheckIcon width={24} height={24} />
@@ -48,8 +48,8 @@ export default function PriceCard() {
 
   const PriceCardContainer = ({ children }) => {
     return (
-      <CrystalBox minW="250px">
-        <VStack spacing={8}>{children}</VStack>
+      <CrystalBox maxW="250px">
+        <VStack spacing={{base: 4, md: 8}}>{children}</VStack>
       </CrystalBox>
     );
   };

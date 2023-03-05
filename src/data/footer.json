@@ -1,0 +1,47 @@
+{
+    "aboutUs": "Somos un estudio de diseño gráfico potenciado por IA. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere.",
+    "socialMedia": [
+        {
+            "title": "Facebook",
+            "href": "#"
+        },
+        {
+            "title": "Instragram",
+            "href": "#"
+        },
+        {
+            "title": "Behance",
+            "href": "#"
+        },
+        {
+            "title": "Dribbble",
+            "href": "#"
+        }
+    ],
+    "utility": [
+        {
+            "title": "contact",
+            "items": [
+                {
+                    "title": "hello@sucinto.com",
+                    "href": "#"
+                },
+                {
+                    "title": "52+ 81 2345 6378",
+                    "href": "#"
+                }
+            ]
+        }
+    ],
+    "secondary": [
+        {
+            "title": "Términos y condiciones",
+            "href": "#"
+        },
+        {
+            "title": "Privacidad",
+            "href": "#"
+        }
+    ],
+    "copyright": "Sitio web desarrollado por Sucinto"
+}

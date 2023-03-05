@@ -10,12 +10,12 @@ import {
 import { FullContainer } from "../Containers";
 import SectionHeader from "../SectionHeader";
 
-export default function Process() {
-  const Steps = () => {
+export default function Process({data}) {
+  const Step = ({ title, description, image, isEven }) => {
     return (
-      <VStack spacing={16}>
+      <VStack>
         <Stack
-          direction={{ base: "column", md: "row" }}
+          direction={{ base: "column", md: isEven ? "row" : "row-reverse" }}
           align="center"
           justify="center"
           spacing={8}
@@ -23,26 +23,36 @@ export default function Process() {
           <Box boxSize={{ base: "200px", md: "250px" }} display="flex">
             <Image
               boxSize="100%"
-              src="./static/images/features/temp.png"
+              src={image}
               alt="test"
               objectFit="cover"
             />
           </Box>
           <VStack w={{ base: "100%", md: "50%" }} justify="center" align="left">
-            <Heading textAlign={{ base: "center", md: "left" }}>
-              Sed ut perspiciatis unde omnis
+            <Heading
+              textAlign={{ base: "center", md: isEven ? "left" : "right" }}
+            >
+              {title}
             </Heading>
-            <Text textAlign={{ base: "center", md: "left" }}>
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-              aut fugit, sed quia consequuntur magni dolores eos qui ratione
-              voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-              ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-              non numquam eius modi tempora incidunt ut labore et dolore magnam
-              aliquam quaerat voluptatem.
+            <Text textAlign={{ base: "center", md: isEven ? "left" : "right" }}>
+              {description}
             </Text>
           </VStack>
         </Stack>
       </VStack>
+    );
+  };
+  const StepList = () => {
+    return (
+      <>
+        {data.steps.map(({...props}, i) => (
+          <Step
+            key={i}
+            isEven={i % 2 == 0}
+            {...props}
+          />
+        ))}
+      </>
     );
   };
   const ProcessContainer = ({ children }) => {
@@ -61,10 +71,10 @@ export default function Process() {
   return (
     <ProcessContainer>
       <SectionHeader
-        title="Sed ut perspiciatis unde omnis"
-        description="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti."
+        title={data.header.title}
+        description={data.header.description}
       />
-      <Steps />
+      <StepList />
     </ProcessContainer>
   );
 }

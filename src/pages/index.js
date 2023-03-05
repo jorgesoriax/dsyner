@@ -1,12 +1,22 @@
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-import CallToAction from "@/components/sections/CallToAction";
-import FAQ from "@/components/sections/FAQ";
-import Features from "@/components/sections/Features";
-import Hero from "@/components/sections/Hero";
-import Pricing from "@/components/sections/Pricing";
-import Process from "@/components/sections/Process";
 import Head from "next/head";
+
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/sections/Hero";
+import Features from "@/components/sections/Features";
+import Process from "@/components/sections/Process";
+import Pricing from "@/components/sections/Pricing";
+import FAQ from "@/components/sections/FAQ";
+import CTA from "@/components/sections/CTA";
+import Footer from "@/components/Footer";
+
+import navbarData from "@/data/pages/home/navbar";
+import heroData from "@/data/pages/home/sections/hero";
+import featuresData from "@/data/pages/home/sections/features";
+import processData from "@/data/pages/home/sections/process";
+import pricingData from "@/data/pages/home/sections/pricing";
+import faqData from "@/data/pages/home/sections/faq";
+import ctaData from "@/data/pages/home/sections/cta";
+import footerData from "@/data/footer";
 
 export default function Home() {
   return (
@@ -17,14 +27,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <Hero />
-      <Features />
-      <Process />
-      <Pricing />
-      <FAQ />
-      <CallToAction />
-      <Footer/>
+      <Navbar data={navbarData} />
+      <Hero data={heroData} />
+      <Features data={featuresData} />
+      <Process data={processData} />
+      <Pricing data={pricingData} />
+      <FAQ data={faqData} />
+      <CTA data={ctaData} />
+      <Footer data={footerData} />
     </>
   );
 }

@@ -4,44 +4,26 @@ import { RoundedButton } from "./Buttons";
 import CrystalBox from "./CrystalBox";
 import Description from "./Description";
 
-export default function PriceCard() {
+export default function PriceCard({ title, description, features }) {
   const Header = () => {
     return (
       <VStack>
-        <Text fontSize="2xl">Basic</Text>
-        <Description textAlign="center">
-          The basic package includes a little service :(
-        </Description>
+        <Text fontSize="2xl">{title}</Text>
+        <Description textAlign="center">{description}</Description>
       </VStack>
     );
   };
   const Features = () => {
     return (
-      <List w="100%" pb={{base: 8, md: 16}}>
-        <ListItem>
-          <HStack>
-            <CheckIcon width={24} height={24} />
-            <Text>This is a feature A</Text>
-          </HStack>
-        </ListItem>
-        <ListItem>
-          <HStack>
-            <CheckIcon width={24} height={24} />
-            <Text>This is a feature B</Text>
-          </HStack>
-        </ListItem>
-        <ListItem>
-          <HStack>
-            <CheckIcon width={24} height={24} />
-            <Text>This is a feature C</Text>
-          </HStack>
-        </ListItem>
-        <ListItem>
-          <HStack>
-            <CheckIcon width={24} height={24} />
-            <Text>This is a feature D</Text>
-          </HStack>
-        </ListItem>
+      <List w="100%" pb={{ base: 8, md: 16 }}>
+        {features.map((feature, i) => (
+          <ListItem key={i}>
+            <HStack>
+              <CheckIcon width={24} height={24} />
+              <Text>{feature}</Text>
+            </HStack>
+          </ListItem>
+        ))}
       </List>
     );
   };
@@ -49,7 +31,7 @@ export default function PriceCard() {
   const PriceCardContainer = ({ children }) => {
     return (
       <CrystalBox maxW="250px">
-        <VStack spacing={{base: 4, md: 8}}>{children}</VStack>
+        <VStack spacing={{ base: 4, md: 8 }}>{children}</VStack>
       </CrystalBox>
     );
   };

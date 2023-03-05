@@ -1,0 +1,20 @@
+{
+    "links": [
+        {
+            "title": "Features",
+            "to": "toFilled"
+        },
+        {
+            "title": "Portfolio",
+            "to": "toFilled"
+        },
+        {
+            "title": "Plans",
+            "to": "toFilled"
+        }
+    ],
+    "cta": {
+        "title": "Obtener diseño",
+        "to": ""
+    }
+}

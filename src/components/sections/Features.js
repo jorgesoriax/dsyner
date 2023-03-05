@@ -11,8 +11,8 @@ import { LgContainer } from "../Containers";
 import CrystalBox from "../CrystalBox";
 import SectionHeader from "../SectionHeader";
 
-export default function Features() {
-  const Feature = () => {
+export default function Features({data}) {
+  const Feature = ({ title, description }) => {
     return (
       <Stack
         direction={{ base: "column", md: "row" }}
@@ -28,10 +28,14 @@ export default function Features() {
             />
           </Flex>
         </CrystalBox>
-        <Text textAlign={{ base: "center", md: "initial" }}>
-          Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-          impedit quo minus id quod maxime placeat facere
-        </Text>
+        <Stack>
+          <Text textAlign="left" fontSize="xl">
+            {title}
+          </Text>
+          <Text textAlign={{ base: "center", md: "initial" }}>
+            {description}
+          </Text>
+        </Stack>
       </Stack>
     );
   };
@@ -41,18 +45,15 @@ export default function Features() {
         templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
         gap={16}
       >
-        <GridItem>
-          <Feature />
-        </GridItem>
-        <GridItem>
-          <Feature />
-        </GridItem>
-        <GridItem>
-          <Feature />
-        </GridItem>
-        <GridItem>
-          <Feature />
-        </GridItem>
+        {data.features.map((item, i) => (
+          <GridItem key={i}>
+            <Feature
+              title={item.title}
+              test="dasdas"
+              description={item.description}
+            />
+          </GridItem>
+        ))}
       </Grid>
     );
   };
@@ -67,8 +68,8 @@ export default function Features() {
   return (
     <FeaturesContainer>
       <SectionHeader
-        title="Sed ut perspiciatis unde omnis"
-        description=" At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti."
+        title={data.header.title}
+        description={data.header.description}
       />
       <FeatureGrid />
     </FeaturesContainer>

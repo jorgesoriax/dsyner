@@ -2,7 +2,7 @@ import { Heading, HStack, Stack, Text, VStack } from "@chakra-ui/react";
 import { RoundedButton } from "../Buttons";
 import { LgContainer } from "../Containers";
 
-export default function CallToAction() {
+export default function CTA({ data }) {
   const TextContent = () => {
     return (
       <VStack w={{ base: "100%", md: "60%" }}>
@@ -13,12 +13,10 @@ export default function CallToAction() {
           w="100%"
           textAlign={{ base: "center", md: "left" }}
         >
-          Sed ut perspiciatis unde
+          {data.textContent.title}
         </Heading>
         <Text color="whiteAlpha.700" textAlign={{ base: "center", md: "left" }}>
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-          fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-          sequi nesciunt.
+          {data.textContent.description}
         </Text>
       </VStack>
     );
@@ -30,7 +28,7 @@ export default function CallToAction() {
         color="violet.500"
         fontWeight="semibold"
       >
-        Get Started
+        {data.actions.title}
       </RoundedButton>
     );
   };
@@ -41,10 +39,14 @@ export default function CallToAction() {
           direction={{ base: "column", md: "row" }}
           borderRadius="2xl"
           p={8}
-          bg="violet.500"
           justify="space-between"
           align={{ base: "center", md: "end" }}
           spacing={8}
+          bg="violet.500"
+          bgImage={{ base: "none", md: "url(./static/images/cta-bg.png)" }}
+          bgRepeat="no-repeat"
+          bgPos="right"
+          bgSize="contain"
         >
           {children}
         </Stack>

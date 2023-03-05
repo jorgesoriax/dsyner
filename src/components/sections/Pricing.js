@@ -1,15 +1,15 @@
-import { HStack, Stack, VStack } from "@chakra-ui/react";
+import { Box, HStack, Stack, VStack } from "@chakra-ui/react";
 import { LgContainer } from "../Containers";
 import PriceCard from "../PriceCard";
 import SectionHeader from "../SectionHeader";
 
-export default function Pricing() {
+export default function Pricing({ data }) {
   const PriceCardsContainer = () => {
     return (
       <Stack spacing={8} direction={{ base: "column", md: "row" }}>
-        <PriceCard />
-        <PriceCard />
-        <PriceCard />
+        {data.priceCards.map(({ ...props }, i) => (
+          <PriceCard key={i} {...props} />
+        ))}
       </Stack>
     );
   };
@@ -24,8 +24,8 @@ export default function Pricing() {
   return (
     <PricingContainer>
       <SectionHeader
-        title="Sed ut perspiciatis unde omnis"
-        description="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti."
+        title={data.header.title}
+        description={data.header.description}
       />
       <PriceCardsContainer />
     </PricingContainer>

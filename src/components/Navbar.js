@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Drawer,
   DrawerBody,
@@ -9,23 +10,15 @@ import {
   Flex,
   HStack,
   IconButton,
-  Image,
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
 import { Bars3BottomRightIcon } from "@heroicons/react/24/solid";
-import React from "react";
-import { RoundedButton } from "./Buttons";
+import { RoundedButton, RoundedScrollButton } from "./Buttons";
 import { LgContainer } from "./Containers";
 import Logo from "./Logo";
 
-
-const data = {
-  links: ["Option A", "Option B", "Option C"],
-  cta: "Get started",
-};
-
-export default function Navbar() {
+export default function Navbar({data}) {
   const MobileDrawer = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = React.useRef();
@@ -54,7 +47,7 @@ export default function Navbar() {
               <VStack>
                 {data.links.map((item, i) => (
                   <RoundedButton key={i} variant="ghost">
-                    {item}
+                    {item.title}
                   </RoundedButton>
                 ))}
               </VStack>
@@ -68,10 +61,10 @@ export default function Navbar() {
   const Links = () => {
     return (
       <HStack display={{ base: "none", md: "flex" }}>
-        {data.links.map((item, i) => (
-          <RoundedButton key={i} variant="ghost">
-            {item}
-          </RoundedButton>
+        {data.links.map(({title, to}, i) => (
+          <RoundedScrollButton key={i} variant="ghost" to={to}>
+            {title}
+          </RoundedScrollButton>
         ))}
       </HStack>
     );
@@ -79,7 +72,7 @@ export default function Navbar() {
   const Actions = () => {
     return (
       <HStack>
-        <RoundedButton>{data.cta}</RoundedButton>
+        <RoundedButton>{data.cta.title}</RoundedButton>
         <MobileDrawer />
       </HStack>
     );

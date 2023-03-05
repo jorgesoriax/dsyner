@@ -1,0 +1,23 @@
+{
+    "header": {
+        "title": "Sed ut perspiciatis unde omnis",
+        "description": "Consigue tu nuevo diseño siguiendo 3 rápidos y sencillos pasos."
+    },
+    "steps": [
+        {
+            "title": "Solicitud de servicio ",
+            "description": "Rellena nuestro breve formulario para conocer más acerca de tus necesidades.",
+            "image": "./static/images/features/temp.png"
+        },
+        {
+            "title": "Manos a la obra",
+            "description": "Una vez que tú solicitud se apruebe, solo paga el 50% y comenzaremos a crear.",
+            "image": "./static/images/features/temp.png"
+        },
+        {
+            "title": "Recibe tu diseño",
+            "description": "Cuando tú diseño esté listo, te entregaremos todos tus recursos listos para ser usados.",
+            "image": "./static/images/features/temp.png"
+        }
+    ]
+}

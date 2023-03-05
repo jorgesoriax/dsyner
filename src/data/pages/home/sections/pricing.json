@@ -1,0 +1,38 @@
+{
+    "header": {
+        "title": "Sed ut perspiciatis unde omnis",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti."
+    },
+    "priceCards": [
+        {
+            "title": "Plan BASIC",
+            "description": "The BASIC package includes...",
+            "features": [
+                "This is a feature A",
+                "This is a feature B",
+                "This is a feature C",
+                "This is a feature D"
+            ]
+        },
+        {
+            "title": "Plan STANDAR",
+            "description": "The STANDAR package includes...",
+            "features": [
+                "This is a feature A",
+                "This is a feature B",
+                "This is a feature C",
+                "This is a feature D"
+            ]
+        },
+        {
+            "title": "Plan PRO",
+            "description": "The PRO package includes...",
+            "features": [
+                "This is a feature A",
+                "This is a feature B",
+                "This is a feature C",
+                "This is a feature D"
+            ]
+        }
+    ]
+}

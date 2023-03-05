@@ -1,10 +1,11 @@
 import { HStack, List, ListItem, Stack, Text, VStack } from "@chakra-ui/react";
+import { SparklesIcon } from "@heroicons/react/24/solid";
 import { RoundedButton } from "./Buttons";
 import { LgContainer } from "./Containers";
 import Description from "./Description";
 import Logo from "./Logo";
 
-export default function Footer() {
+export default function Footer({ data }) {
   const SocialMedia = () => {
     return (
       <Stack
@@ -22,24 +23,11 @@ export default function Footer() {
             columnGap={8}
             wrap="wrap"
           >
-            <ListItem>
-              <RoundedButton variant="link">Instagram</RoundedButton>
-            </ListItem>
-            <ListItem>
-              <RoundedButton variant="link">Behance</RoundedButton>
-            </ListItem>
-            <ListItem>
-              <RoundedButton variant="link">Dribbble</RoundedButton>
-            </ListItem>
-            <ListItem>
-              <RoundedButton variant="link">Dribbble</RoundedButton>
-            </ListItem>
-            <ListItem>
-              <RoundedButton variant="link">Dribbble</RoundedButton>
-            </ListItem>
-            <ListItem>
-              <RoundedButton variant="link">Dribbble</RoundedButton>
-            </ListItem>
+            {data.socialMedia.map(({ title, href }, i) => (
+              <ListItem key={i}>
+                <RoundedButton variant="link">{title}</RoundedButton>
+              </ListItem>
+            ))}
           </HStack>
         </List>
       </Stack>
@@ -57,27 +45,25 @@ export default function Footer() {
         pb={8}
       >
         <Description maxW="550px" textAlign={{ base: "center", md: "left" }}>
-          Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-          impedit quo minus id quod maxime placeat facere. Nam libero tempore,
-          cum soluta nobis est eligendi optio cumque nihil impedit quo minus id
-          quod maxime placeat facere. Nam libero tempore, cum soluta nobis est
-          eligendi optio cumque nihil impedit quo minus id quod maxime placeat
-          facere.
+          {data.aboutUs}
         </Description>
-        <List>
-          <VStack
-            spacing={4}
-            align={{ base: "center", md: "end" }}
-            w={{ base: "100%", md: "auto" }}
-          >
-            <ListItem>
-              <RoundedButton variant="link">52+ 81 2345 6378</RoundedButton>
-            </ListItem>
-            <ListItem>
-              <RoundedButton variant="link">example@email.com</RoundedButton>
-            </ListItem>
-          </VStack>
-        </List>
+        <HStack spacing={8} align="start">
+          {data.utility.map(({ title, items }, i) => (
+            <List key={i}>
+              <VStack
+                spacing={4}
+                align={{ base: "center", md: "end" }}
+                w={{ base: "100%", md: "auto" }}
+              >
+                {items.map(({ title, href }, i) => (
+                  <ListItem key={i}>
+                    <RoundedButton variant="link">{title}</RoundedButton>
+                  </ListItem>
+                ))}
+              </VStack>
+            </List>
+          ))}
+        </HStack>
       </Stack>
     );
   };
@@ -88,19 +74,21 @@ export default function Footer() {
         justify="space-between"
         spacing={16}
       >
-        <Text textAlign="center">@copyright 2023</Text>
+        <HStack spacing={4}>
+          <SparklesIcon width={24} height={24} />
+          <Text textAlign="center">{data.copyright}</Text>
+        </HStack>
         <List>
           <Stack
             direction={{ base: "column", md: "row" }}
             spacing={{ base: 4, md: 8 }}
             align={{ base: "center", md: "normal" }}
           >
-            <ListItem>
-              <RoundedButton variant="link">Option A</RoundedButton>
-            </ListItem>
-            <ListItem>
-              <RoundedButton variant="link">Option B</RoundedButton>
-            </ListItem>
+            {data.secondary.map(({title, href}, i) => (
+              <ListItem key={i}>
+                <RoundedButton variant="link">{title}</RoundedButton>
+              </ListItem>
+            ))}
           </Stack>
         </List>
       </Stack>

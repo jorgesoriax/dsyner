@@ -14,8 +14,8 @@ import MdContainer, { LgContainer } from "../Containers";
 import Description from "../Description";
 import SectionHeader from "../SectionHeader";
 
-export default function FAQ() {
-  const Question = () => {
+export default function FAQ({data}) {
+  const Question = ({ question, answer }) => {
     return (
       <AccordionItem borderColor="altGray.lighter" border={0}>
         {({ isExpanded }) => (
@@ -23,23 +23,25 @@ export default function FAQ() {
             <Heading as="h3">
               <AccordionButton
                 p={0}
-                pr={{base: 0, md: 4}}
+                pr={{ base: 0, md: 4 }}
                 role="group"
                 _hover={{
                   bg: "transparent",
                 }}
-                _focus={{
-                  WebkitTapHighlightColor: "transparent",
-                }}
               >
-                <Box as="span" flex="1" textAlign="left" py={4} px={{base: 0, md: 4}}>
+                <Box
+                  as="span"
+                  flex="1"
+                  textAlign="left"
+                  py={4}
+                  px={{ base: 0, md: 4 }}
+                >
                   <Text
                     fontSize="xl"
                     fontWeight="medium"
                     _groupHover={{ color: "violet.400" }}
                   >
-                    Vel illum qui dolorem eum fugiat quo voluptas nulla
-                    pariatur?
+                    {question}
                   </Text>
                 </Box>
                 {isExpanded ? (
@@ -54,14 +56,7 @@ export default function FAQ() {
               </AccordionButton>
             </Heading>
             <AccordionPanel>
-              <Description>
-                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
-                aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-                ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-                non numquam eius modi tempora incidunt ut labore et dolore
-                magnam aliquam quaerat voluptatem.
-              </Description>
+              <Description>{answer}</Description>
             </AccordionPanel>
           </>
         )}
@@ -71,9 +66,9 @@ export default function FAQ() {
   const ListOfQuestions = () => {
     return (
       <Accordion allowMultiple>
-        <Question />
-        <Question />
-        <Question />
+        {data.questions.map((item, i) => (
+          <Question key={i} question={item.question} answer={item.answer} />
+        ))}
       </Accordion>
     );
   };
@@ -85,8 +80,8 @@ export default function FAQ() {
   return (
     <FAQContainer>
       <SectionHeader
-        title="Sed ut perspiciatis unde omnis"
-        description="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti."
+        title={data.header.title}
+        description={data.header.description}
       />
       <ListOfQuestions />
     </FAQContainer>

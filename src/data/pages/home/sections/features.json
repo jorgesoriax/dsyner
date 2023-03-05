@@ -1,0 +1,24 @@
+{
+    "header": {
+        "title": "Sed ut perspiciatis unde omnis",
+        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti."
+    },
+    "features": [
+        {
+            "title": "Garantía de satisfacción",
+            "description": "Si tu diseño no satisface tus necesidades, puedes solicitar un reembolso completo."
+        },
+        {
+            "title": "Revisiones ilimitadas",
+            "description": "Supervisa el proceso de diseño para asegurar que el resultado sea lo que necesitas o incluso mejor."
+        },
+        {
+            "title": "Entrega en menos de 72 horas",
+            "description": "Usamos diferentes herramientas de inteligencia artificial para optimizar nuestros procesos hasta un 200%."
+        },
+        {
+            "title": "Pixel perfect",
+            "description": "Nuestra dedicación al detalle te asegura un diseño de calidad."
+        }
+    ]
+}

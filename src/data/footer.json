@@ -33,15 +33,6 @@
             ]
         }
     ],
-    "secondary": [
-        {
-            "title": "Términos y condiciones",
-            "href": "#"
-        },
-        {
-            "title": "Privacidad",
-            "href": "#"
-        }
-    ],
+    "secondary": [],
     "copyright": "Sitio web desarrollado por Sucinto"
 }

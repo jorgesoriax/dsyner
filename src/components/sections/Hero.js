@@ -34,8 +34,8 @@ export default function Hero({data}) {
           </Highlight>
         </Heading>
         <HStack>
+          <SparklesIcon width={24} height={24} color="gray" />
           <Description>{data.textContent.caption}</Description>
-          <SparklesIcon width={18} height={18} color="gray" />
         </HStack>
         <Text fontSize="1xl" textAlign={{ base: "center", md: "left" }}>
           {data.textContent.description}

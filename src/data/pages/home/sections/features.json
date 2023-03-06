@@ -6,19 +6,23 @@
     "features": [
         {
             "title": "Garantía de satisfacción",
-            "description": "Si tu diseño no satisface tus necesidades, puedes solicitar un reembolso completo."
+            "description": "Si tu diseño no satisface tus necesidades, puedes solicitar un reembolso completo.",
+            "image": "./static/images/features/warranty.png"
         },
         {
             "title": "Revisiones ilimitadas",
-            "description": "Supervisa el proceso de diseño para asegurar que el resultado sea lo que necesitas o incluso mejor."
+            "description": "Supervisa el proceso de diseño para asegurar que el resultado sea lo que necesitas o incluso mejor.",
+            "image": "./static/images/features/reviews.png"
         },
         {
             "title": "Entrega en menos de 72 horas",
-            "description": "Usamos diferentes herramientas de inteligencia artificial para optimizar nuestros procesos hasta un 200%."
+            "description": "Usamos diferentes herramientas de inteligencia artificial para optimizar nuestros procesos hasta un 200%.",
+            "image": "./static/images/features/delivery.png"
         },
         {
             "title": "Pixel perfect",
-            "description": "Nuestra dedicación al detalle te asegura un diseño de calidad."
+            "description": "Nuestra dedicación al detalle te asegura un diseño de calidad.",
+            "image": "./static/images/features/quality.png"
         }
     ]
 }

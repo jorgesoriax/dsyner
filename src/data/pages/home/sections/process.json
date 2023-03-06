@@ -7,17 +7,17 @@
         {
             "title": "Solicitud de servicio ",
             "description": "Rellena nuestro breve formulario para conocer más acerca de tus necesidades.",
-            "image": "./static/images/features/temp.png"
+            "image": "./static/images/process/form.png"
         },
         {
             "title": "Manos a la obra",
             "description": "Una vez que tú solicitud se apruebe, solo paga el 50% y comenzaremos a crear.",
-            "image": "./static/images/features/temp.png"
+            "image": "./static/images/process/design.png"
         },
         {
             "title": "Recibe tu diseño",
             "description": "Cuando tú diseño esté listo, te entregaremos todos tus recursos listos para ser usados.",
-            "image": "./static/images/features/temp.png"
+            "image": "./static/images/process/delivery.png"
         }
     ]
 }

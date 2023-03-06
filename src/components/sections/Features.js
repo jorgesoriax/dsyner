@@ -11,8 +11,8 @@ import { LgContainer } from "../Containers";
 import CrystalBox from "../CrystalBox";
 import SectionHeader from "../SectionHeader";
 
-export default function Features({data}) {
-  const Feature = ({ title, description }) => {
+export default function Features({ data }) {
+  const Feature = ({ title, description, image }) => {
     return (
       <Stack
         direction={{ base: "column", md: "row" }}
@@ -21,11 +21,7 @@ export default function Features({data}) {
       >
         <CrystalBox boxSize="150px" minW="150px">
           <Flex boxSize="100%" align="center" justify="center">
-            <Image
-              src="./static/images/features/temp.png"
-              alt="temp"
-              boxSize="100px"
-            />
+            <Image src={image} alt="temp" boxSize="100px" />
           </Flex>
         </CrystalBox>
         <Stack>
@@ -45,13 +41,9 @@ export default function Features({data}) {
         templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
         gap={16}
       >
-        {data.features.map((item, i) => (
+        {data.features.map(({ ...props }, i) => (
           <GridItem key={i}>
-            <Feature
-              title={item.title}
-              test="dasdas"
-              description={item.description}
-            />
+            <Feature {...props} />
           </GridItem>
         ))}
       </Grid>

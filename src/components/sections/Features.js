@@ -51,7 +51,7 @@ export default function Features({ data }) {
   };
   const FeaturesContainer = ({ children }) => {
     return (
-      <LgContainer as="section">
+      <LgContainer id="features">
         <VStack>{children}</VStack>
       </LgContainer>
     );

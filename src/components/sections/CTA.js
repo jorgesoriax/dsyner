@@ -34,7 +34,7 @@ export default function CTA({ data }) {
   };
   const CallToActionContainer = ({ children }) => {
     return (
-      <LgContainer>
+      <LgContainer id="cta">
         <Stack
           direction={{ base: "column", md: "row" }}
           borderRadius="2xl"

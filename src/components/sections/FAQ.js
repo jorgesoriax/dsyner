@@ -74,7 +74,7 @@ export default function FAQ({data}) {
   };
 
   const FAQContainer = ({ children }) => {
-    return <MdContainer>{children}</MdContainer>;
+    return <MdContainer id="faq">{children}</MdContainer>;
   };
 
   return (

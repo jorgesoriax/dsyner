@@ -14,7 +14,7 @@ import { RoundedButton, RoundedScrollButton } from "../Buttons";
 import { LgContainer } from "../Containers";
 import Description from "../Description";
 
-export default function Hero({data}) {
+export default function Hero({ data }) {
   const TextContent = () => {
     return (
       <VStack w="100%" align={{ base: "center", md: "start" }} spacing={4}>
@@ -51,14 +51,16 @@ export default function Hero({data}) {
         justify={{ base: "center", md: "left" }}
         spacing={{ base: 4, md: 8 }}
       >
-        <RoundedButton>{data.actions.primary}</RoundedButton>
+        <RoundedScrollButton to={data.actions.primary.to}>
+          {data.actions.primary.title}
+        </RoundedScrollButton>
         <RoundedScrollButton
-          to="test"
+          to={data.actions.secondary.to}
           w="100%"
           variant="ghost"
           rightIcon={<ArrowDownIcon width={18} height={18} />}
         >
-          {data.actions.secondary}
+          {data.actions.secondary.title}
         </RoundedScrollButton>
       </Stack>
     );
@@ -77,19 +79,19 @@ export default function Hero({data}) {
   };
   const Left = ({ children }) => {
     return (
-      <VStack w={{ base: "100%", md: "45%" }} spacing={{ base: 12, md: 24 }}>
+      <VStack w={{ base: "100%", md: "55%" }} spacing={{ base: 12, md: 24 }}>
         {children}
       </VStack>
     );
   };
   const Right = ({ children }) => {
-    return <VStack w={{ base: "100%", md: "55%" }}>{children}</VStack>;
+    return <VStack w={{ base: "100%", md: "45%" }}>{children}</VStack>;
   };
   const HeroContainer = ({ children }) => {
     return (
       <LgContainer
-        as="section"
-        h={{ base: "auto", md: "calc(100vh - 82px)" }}
+        id="hero"
+        h={{ base: "auto", md: "calc(100vh - 83px)" }}
         pt={{ base: 16, md: 0 }}
         py={0}
       >

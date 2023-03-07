@@ -15,7 +15,7 @@ export default function Pricing({ data }) {
   };
   const PricingContainer = ({ children }) => {
     return (
-      <LgContainer as="section">
+      <LgContainer id="pricing">
         <VStack>{children}</VStack>
       </LgContainer>
     );

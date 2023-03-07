@@ -2,14 +2,23 @@
     "textContent": {
         "header": {
             "text": "Consigue tu diseño único en 72hrs",
-            "highlight": ["diseño", "único"]
+            "highlight": [
+                "diseño",
+                "único"
+            ]
         },
         "caption": "Servicio de diseño gráfico potenciado por IA.",
         "description": "Diseñamos de forma colaborativa con inteligencia artificial para brindarte resultados más precisos y rápidos."
     },
     "actions": {
-        "primary": "Obtener diseño",
-        "secondary": "Muéstrame cómo funciona"
+        "primary": {
+            "title": "Obtener diseño",
+            "to": "pricing"
+        },
+        "secondary": {
+            "title": "Muéstrame cómo funciona",
+            "to": "process"
+        }
     },
     "heroImage": ""
 }

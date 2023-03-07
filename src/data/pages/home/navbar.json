@@ -1,16 +1,20 @@
 {
     "links": [
         {
-            "title": "Features",
-            "to": "toFilled"
+            "title": "Valor",
+            "to": "features"
         },
         {
-            "title": "Portfolio",
-            "to": "toFilled"
+            "title": "Proceso",
+            "to": "process"
         },
         {
-            "title": "Plans",
-            "to": "toFilled"
+            "title": "Precios",
+            "to": "pricing"
+        },
+        {
+            "title": "FAQ",
+            "to": "faq"
         }
     ],
     "cta": {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Drawer,
   DrawerBody,
@@ -14,11 +14,15 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { Bars3BottomRightIcon } from "@heroicons/react/24/solid";
-import { RoundedButton, RoundedScrollButton } from "./Buttons";
-import { LgContainer } from "./Containers";
+import {
+  LogoScrollButton,
+  RoundedButton,
+  RoundedScrollButton,
+} from "./Buttons";
+import { FullContainer, LgContainer } from "./Containers";
 import Logo from "./Logo";
 
-export default function Navbar({data}) {
+export default function Navbar({ data }) {
   const MobileDrawer = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = React.useRef();
@@ -61,7 +65,7 @@ export default function Navbar({data}) {
   const Links = () => {
     return (
       <HStack display={{ base: "none", md: "flex" }}>
-        {data.links.map(({title, to}, i) => (
+        {data.links.map(({ title, to }, i) => (
           <RoundedScrollButton key={i} variant="ghost" to={to}>
             {title}
           </RoundedScrollButton>
@@ -80,17 +84,29 @@ export default function Navbar({data}) {
 
   const NavbarContainer = ({ children }) => {
     return (
-      <LgContainer as="nav" mb={0} py={0}>
+      <FullContainer
+        as="nav"
+        mb={0}
+        py={0}
+        pos="sticky"
+        top={0}
+        bg="altGray.darkerRGBA"
+        zIndex="sticky"
+        backdropFilter="auto"
+        backdropBlur="2px"
+        borderBottom="1px"
+        borderColor="altGray.dark"
+      >
         <HStack py={4} align="center" justify="space-between">
           {children}
         </HStack>
-      </LgContainer>
+      </FullContainer>
     );
   };
 
   return (
     <NavbarContainer>
-      <Logo />
+      <LogoScrollButton to="hero"/>
       <Links />
       <Actions />
     </NavbarContainer>

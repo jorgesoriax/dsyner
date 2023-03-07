@@ -58,7 +58,7 @@ export default function Process({data}) {
   const ProcessContainer = ({ children }) => {
     return (
       <FullContainer
-        as="section"
+        id="process"
         borderY="1px"
         borderColor="altGray.lighter"
         bg="altGray.dark"

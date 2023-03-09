@@ -3,36 +3,79 @@
         "title": "Sed ut perspiciatis unde omnis",
         "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti."
     },
-    "priceCards": [
-        {
-            "title": "Plan BASIC",
-            "description": "The BASIC package includes...",
-            "features": [
-                "This is a feature A",
-                "This is a feature B",
-                "This is a feature C",
-                "This is a feature D"
-            ]
-        },
-        {
-            "title": "Plan STANDAR",
-            "description": "The STANDAR package includes...",
-            "features": [
-                "This is a feature A",
-                "This is a feature B",
-                "This is a feature C",
-                "This is a feature D"
-            ]
-        },
-        {
-            "title": "Plan PRO",
-            "description": "The PRO package includes...",
-            "features": [
-                "This is a feature A",
-                "This is a feature B",
-                "This is a feature C",
-                "This is a feature D"
-            ]
-        }
-    ]
+    "priceTabs": {
+        "categories": [
+            {
+                "title": "Identidad",
+                "services": [
+                    {
+                        "title": "Logotipo",
+                        "description": "asd",
+                        "features": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "title": "Tarjetas",
+                        "description": "asd",
+                        "features": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "title": "Brochure",
+                        "description": "asd",
+                        "features": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Web",
+                "services": [
+                    {
+                        "title": "Diseño de página web",
+                        "description": "asd",
+                        "features": [
+                            "3",
+                            "4"
+                        ]
+                    },
+                    {
+                        "title": "Página de redes sociales",
+                        "description": "asd",
+                        "features": [
+                            "3",
+                            "4"
+                        ]
+                    },
+                    {
+                        "title": "Feed de redes sociales",
+                        "description": "asd",
+                        "features": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "Gráficos",
+                "services": [
+                    {
+                        "title": "Ilustración",
+                        "description": "asd",
+                        "features": [
+                            "5",
+                            "6"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
 }

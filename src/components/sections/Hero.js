@@ -33,10 +33,16 @@ export default function Hero({ data }) {
             {data.textContent.header.text}
           </Highlight>
         </Heading>
-        <HStack>
+        <Stack
+          direction={{ base: "column", md: "row" }}
+          align="center"
+          w="100%"
+        >
           <SparklesIcon width={24} height={24} color="gray" />
-          <Description>{data.textContent.caption}</Description>
-        </HStack>
+          <Description align="center">
+            {data.textContent.caption}
+          </Description>
+        </Stack>
         <Text fontSize="1xl" textAlign={{ base: "center", md: "left" }}>
           {data.textContent.description}
         </Text>
@@ -49,6 +55,7 @@ export default function Hero({ data }) {
         direction={{ base: "column", md: "row" }}
         w="100%"
         justify={{ base: "center", md: "left" }}
+        align="center"
         spacing={{ base: 4, md: 8 }}
       >
         <RoundedScrollButton to={data.actions.primary.to}>

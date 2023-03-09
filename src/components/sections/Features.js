@@ -25,7 +25,7 @@ export default function Features({ data }) {
           </Flex>
         </CrystalBox>
         <Stack>
-          <Text textAlign="left" fontSize="xl">
+          <Text textAlign={{base: "center", md: "left"}} fontSize="xl">
             {title}
           </Text>
           <Text textAlign={{ base: "center", md: "initial" }}>

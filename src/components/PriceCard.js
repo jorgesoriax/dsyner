@@ -4,7 +4,8 @@ import { RoundedButton } from "./Buttons";
 import CrystalBox from "./CrystalBox";
 import Description from "./Description";
 
-export default function PriceCard({ title, description, features }) {
+export default function PriceCard({ title, description, features, ...props }) {
+  console.log(features);
   const Header = () => {
     return (
       <VStack>
@@ -30,15 +31,23 @@ export default function PriceCard({ title, description, features }) {
 
   const PriceCardContainer = ({ children }) => {
     return (
-      <CrystalBox maxW="250px">
-        <VStack spacing={{ base: 4, md: 8 }}>{children}</VStack>
+      <CrystalBox maxW="250px" {...props}>
+        <VStack
+          spacing={{ base: 4, md: 8 }}
+          justify="space-between"
+          boxSize="100%"
+        >
+          {children}
+        </VStack>
       </CrystalBox>
     );
   };
   return (
     <PriceCardContainer>
-      <Header />
-      <Features />
+      <VStack spacing={{ base: 4, md: 8 }}>
+        <Header />
+        <Features />
+      </VStack>
       <RoundedButton w="100%">Obtener</RoundedButton>
     </PriceCardContainer>
   );

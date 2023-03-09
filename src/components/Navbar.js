@@ -28,7 +28,7 @@ export default function Navbar({ data }) {
     const btnRef = React.useRef();
 
     return (
-      <Flex display={{ base: "flex", md: "none" }}>
+      <Flex display={{ base: "none", md: "none" }}>
         <IconButton
           aria-label="Show drawer"
           ref={btnRef}
@@ -76,7 +76,7 @@ export default function Navbar({ data }) {
   const Actions = () => {
     return (
       <HStack>
-        <RoundedButton>{data.cta.title}</RoundedButton>
+        <RoundedScrollButton to={data.cta.to}>{data.cta.title}</RoundedScrollButton>
         <MobileDrawer />
       </HStack>
     );

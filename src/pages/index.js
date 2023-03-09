@@ -29,7 +29,6 @@ export default function Home() {
           content={metaData.description}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#FF5621"></meta>
         <link rel="icon" href="/favicon.svg" />
         <link rel="mask-icon" href="/mask-icon.svg" color="#6828DF" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

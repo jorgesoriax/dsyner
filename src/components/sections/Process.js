@@ -13,7 +13,7 @@ import SectionHeader from "../SectionHeader";
 export default function Process({data}) {
   const Step = ({ title, description, image, isEven }) => {
     return (
-      <VStack>
+      <VStack py={{base: 4, md: 0}}>
         <Stack
           direction={{ base: "column", md: isEven ? "row" : "row-reverse" }}
           align="center"

@@ -5,7 +5,6 @@ import CrystalBox from "./CrystalBox";
 import Description from "./Description";
 
 export default function PriceCard({ title, description, features, ...props }) {
-  console.log(features);
   const Header = () => {
     return (
       <VStack>

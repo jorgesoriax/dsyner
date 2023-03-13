@@ -15,7 +15,7 @@ export default function CTA({ data }) {
         >
           {data.textContent.title}
         </Heading>
-        <Text color="whiteAlpha.700" textAlign={{ base: "center", md: "left" }}>
+        <Text w="100%" color="whiteAlpha.700" textAlign={{ base: "center", md: "left" }}>
           {data.textContent.description}
         </Text>
       </VStack>

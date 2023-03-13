@@ -65,7 +65,7 @@ export default function Hero({ data }) {
           to={data.actions.secondary.to}
           w="100%"
           variant="ghost"
-          rightIcon={<ArrowDownIcon width={18} height={18} />}
+          rightIcon={<ArrowDownIcon width={24} height={24} />}
         >
           {data.actions.secondary.title}
         </RoundedScrollButton>

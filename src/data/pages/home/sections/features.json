@@ -1,27 +1,27 @@
 {
     "header": {
-        "title": "Sed ut perspiciatis unde omnis",
-        "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti."
+        "title": "Ventajas para ti",
+        "description": "a"
     },
     "features": [
         {
             "title": "Garantía de satisfacción",
-            "description": "Si tu diseño no satisface tus necesidades, puedes solicitar un reembolso completo.",
+            "description": "Si tu diseño no cumple con tus necesidades, puedes solicitar un reembolso del 100%.",
             "image": "./static/images/features/warranty.png"
         },
         {
             "title": "Revisiones ilimitadas",
-            "description": "Supervisa el proceso de diseño para asegurar que el resultado sea lo que necesitas o incluso mejor.",
+            "description": "Creamos junto a ti para asegurarnos de que el resultado final cumpla con tus expectativas.",
             "image": "./static/images/features/reviews.png"
         },
         {
             "title": "Entrega en menos de 72hrs",
-            "description": "Usamos diferentes herramientas de inteligencia artificial para optimizar nuestros procesos hasta un 200%.",
+            "description": "Usamos diferentes herramientas de Inteligencia Artificial para optimizar nuestros tiempos de entrega.",
             "image": "./static/images/features/delivery.png"
         },
         {
-            "title": "Pixel perfect",
-            "description": "Nuestra dedicación al detalle te asegura un diseño de calidad.",
+            "title": "Ojo en el detalle",
+            "description": "Nuestra dedicación a los detalles te garantizan diseños de calidad.",
             "image": "./static/images/features/quality.png"
         }
     ]

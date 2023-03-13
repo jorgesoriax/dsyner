@@ -39,18 +39,13 @@ export default function Pricing({ data }) {
             <TabPanel key={i} px={0} pt={8} pb={0}>
               <Grid templateColumns={{base: "repeat(1, 1fr)", md: "repeat(3, 1fr)"}} gap={8}>
                 {item.services.map(({ ...props }, i) => (
-                  <GridItem>
-                    <PriceCard key={i} {...props} maxW="100%" h="100%"/>
+                  <GridItem key={i}>
+                    <PriceCard {...props} maxW="100%" h="100%"/>
                   </GridItem>
                 ))}
               </Grid>
             </TabPanel>
           ))}
-          {/* <p>Diseño de página web</p> */}
-          {/* <p>Página de redes sociales</p> */}
-          {/* <p>Feed de redes sociales</p> */}
-          {/* <p>Ilustraciones</p> */}
-          {/* <p>Flyer</p> */}
         </TabPanels>
       </Tabs>
     );

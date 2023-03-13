@@ -38,8 +38,8 @@ export default function Home() {
       <Features data={featuresData} />
       <Process data={processData} />
       <Pricing data={pricingData} />
-      <FAQ data={faqData} />
       <CTA data={ctaData} />
+      <FAQ data={faqData} />
       <Footer data={footerData} />
     </>
   );

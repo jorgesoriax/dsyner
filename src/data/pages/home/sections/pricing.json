@@ -1,7 +1,7 @@
 {
     "header": {
         "title": "Elige el servicio ideal para ti",
-        "description": "Cuentas con garantia de satisfacción y revisiones ilimitadas."
+        "description": "Todos nuestros servicios cuentan con garantia de satisfacción y revisiones ilimitadas."
     },
     "priceTabs": {
         "categories": [
@@ -10,27 +10,33 @@
                 "services": [
                     {
                         "title": "Logotipo",
-                        "description": "asd",
+                        "description": "Una identidad para tu marca inspirada en tu mensaje.",
                         "features": [
-                            "1",
-                            "2"
-                        ]
+                            "2 propuestas",
+                            "Archivos originales",
+                            "Optimización para impresión",
+                            "Manual de uso",
+                            "Presentación"
+                        ],
+                        "price": "$ 2000 MXN"
                     },
                     {
-                        "title": "Tarjetas",
-                        "description": "asd",
+                        "title": "Tarjeta de presentación",
+                        "description": "Brinda una primera impresión increible.",
                         "features": [
-                            "1",
-                            "2"
-                        ]
+                            "Archivos originales",
+                            "Manual de uso"
+                        ],
+                        "price": "$ 1000 MXN"
                     },
                     {
                         "title": "Brochure",
-                        "description": "asd",
+                        "description": "Da a conocer tus servicios profesionales.",
                         "features": [
-                            "1",
-                            "2"
-                        ]
+                            "Archivos originales",
+                            "Manual de uso"
+                        ],
+                        "price": "$ 1500 MXN"
                     }
                 ]
             },
@@ -39,27 +45,23 @@
                 "services": [
                     {
                         "title": "Diseño de página web",
-                        "description": "asd",
+                        "description": "Dale forma a tu presencia online.",
                         "features": [
-                            "3",
-                            "4"
-                        ]
+                            "UI Kit",
+                            "Archivos originales"
+                        ],
+                        "price": "$ 2000 MXN"
                     },
                     {
-                        "title": "Página de redes sociales",
-                        "description": "asd",
+                        "title": "Redes sociales",
+                        "description": "Expresa tu marca con tu comunidad.",
                         "features": [
-                            "3",
-                            "4"
-                        ]
-                    },
-                    {
-                        "title": "Feed de redes sociales",
-                        "description": "asd",
-                        "features": [
-                            "3",
-                            "4"
-                        ]
+                            "Imagen de perfil",
+                            "Historias destacadas",
+                            "3-6 publicaciones",
+                            "Manual de uso"
+                        ],
+                        "price": "$ 1750 MXN"
                     }
                 ]
             },
@@ -68,11 +70,12 @@
                 "services": [
                     {
                         "title": "Ilustración",
-                        "description": "asd",
+                        "description": "Da vida a tu contenido.",
                         "features": [
-                            "5",
-                            "6"
-                        ]
+                            "Optimización para impresión",
+                            "Manual de uso"
+                        ],
+                        "price": "$ 1000 MXN"
                     }
                 ]
             }

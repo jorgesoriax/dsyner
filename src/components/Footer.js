@@ -3,7 +3,7 @@ import { SparklesIcon } from "@heroicons/react/24/solid";
 import { RoundedButton } from "./Buttons";
 import { LgContainer } from "./Containers";
 import Description from "./Description";
-import Logo from "./Logo";
+import { HLogo } from "./Logo";
 
 export default function Footer({ data }) {
   const SocialMedia = () => {
@@ -14,7 +14,7 @@ export default function Footer({ data }) {
         justify={{ base: "center", md: "space-between" }}
         align="center"
       >
-        <Logo />
+        <HLogo />
         <List>
           <HStack
             spacing={0}
@@ -84,7 +84,7 @@ export default function Footer({ data }) {
             spacing={{ base: 4, md: 8 }}
             align={{ base: "center", md: "normal" }}
           >
-            {data.secondary.map(({title, href}, i) => (
+            {data.secondary.map(({ title, href }, i) => (
               <ListItem key={i}>
                 <RoundedButton variant="link">{title}</RoundedButton>
               </ListItem>

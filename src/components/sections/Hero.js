@@ -80,7 +80,7 @@ export default function Hero({ data }) {
         display={{ base: "none", md: "flex" }}
         h="100%"
       >
-        <Image src="static\images\temp.png" alt="temp" objectFit="cover" />
+        <Image src={data.heroImage} alt="temp" objectFit="cover" />
       </Box>
     );
   };

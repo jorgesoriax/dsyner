@@ -15,12 +15,12 @@ import {
 } from "@chakra-ui/react";
 import { Bars3BottomRightIcon } from "@heroicons/react/24/solid";
 import {
+  HLogoScrollButton,
   LogoScrollButton,
   RoundedButton,
   RoundedScrollButton,
 } from "./Buttons";
 import { FullContainer, LgContainer } from "./Containers";
-import Logo from "./Logo";
 
 export default function Navbar({ data }) {
   const MobileDrawer = () => {
@@ -106,7 +106,7 @@ export default function Navbar({ data }) {
 
   return (
     <NavbarContainer>
-      <LogoScrollButton to="hero"/>
+      <HLogoScrollButton to="hero" />
       <Links />
       <Actions />
     </NavbarContainer>

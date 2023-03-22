@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-    <g transform="matrix(0.813695,0,0,1.45426,512.001,194.897)">
-        <rect id="logo" x="-629.229" y="-134.017" width="157.307" height="88.017" style="fill:none;"/>
-        <clipPath id="_clip1">
-            <rect id="logo1" serif:id="logo" x="-629.229" y="-134.017" width="157.307" height="88.017"/>
-        </clipPath>
-        <g clip-path="url(#_clip1)">
-            <g transform="matrix(0.314614,0,0,0.176034,-629.229,-134.017)">
-                <circle cx="250" cy="250" r="250" style="fill:url(#_Linear2);"/>
-            </g>
-            <g transform="matrix(0.515406,0,0,0.288382,-678.733,-158.224)">
-                <path d="M242.246,136.575C242.507,133.229 245.298,130.646 248.654,130.646C252.01,130.646 254.801,133.229 255.061,136.575L259.002,187.204C259.787,197.284 264.147,206.752 271.296,213.901C278.445,221.05 287.913,225.41 297.993,226.195L348.622,230.136C351.968,230.396 354.551,233.187 354.551,236.543C354.551,239.9 351.968,242.691 348.622,242.951L297.993,246.892C287.913,247.677 278.445,252.037 271.296,259.186C264.147,266.335 259.787,275.803 259.002,285.883L255.061,336.512C254.801,339.858 252.01,342.44 248.654,342.44C245.298,342.44 242.507,339.858 242.246,336.512L238.305,285.883C237.52,275.803 233.16,266.335 226.011,259.186C218.862,252.037 209.394,247.677 199.314,246.892L148.685,242.951C145.339,242.691 142.757,239.9 142.757,236.543C142.757,233.187 145.339,230.396 148.685,230.136L199.314,226.195C209.394,225.41 218.862,221.05 226.011,213.901C233.16,206.752 237.52,197.284 238.305,187.204L242.246,136.575Z" style="fill:white;"/>
+    <g transform="matrix(1,0,0,1,-145.308,0)">
+        <g id="Symbol-W" serif:id="Symbol W" transform="matrix(1,0,0,1,145.308,0)">
+            <rect x="0" y="0" width="128" height="128" style="fill:none;"/>
+            <g id="symbol" transform="matrix(2.56,0,0,2.56,-82.8391,-97.2523)">
+                <path d="M54.359,50.489L69.859,50.489C76.758,50.489 82.359,56.09 82.359,62.989C82.359,69.888 76.758,75.489 69.859,75.489L32.359,75.489L32.359,70.516L54.359,50.489ZM69.859,53.91C64.848,53.91 60.78,57.978 60.78,62.989C60.78,68 64.848,72.068 69.859,72.068C74.87,72.068 78.938,68 78.938,62.989C78.938,57.978 74.87,53.91 69.859,53.91Z" style="fill:white;"/>
             </g>
         </g>
     </g>
-    <defs>
-        <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(3.06162e-14,-500,500,3.06162e-14,250,500)"><stop offset="0" style="stop-color:rgb(75,26,208);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(154,111,234);stop-opacity:1"/></linearGradient>
-    </defs>
 </svg>

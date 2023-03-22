@@ -20,5 +20,5 @@
             "to": "process"
         }
     },
-    "heroImage": ""
+    "heroImage": "./static/images/hero.jpg"
 }

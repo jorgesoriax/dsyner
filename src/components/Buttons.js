@@ -1,6 +1,6 @@
 import { Button, DarkMode, LightMode } from "@chakra-ui/react";
 import { Link } from "react-scroll";
-import Logo from "./Logo";
+import { Logo, HLogo } from "./Logo";
 
 export function RoundedButton({ children, ...props }) {
   const variantIsGhost = props.variant == "ghost";
@@ -60,7 +60,14 @@ export function RoundedButton({ children, ...props }) {
 
 export function RoundedScrollButton({ to, children, ...props }) {
   return (
-    <Link activeClass="active" to={to} spy={true} smooth={true} duration={500} offset={-83}>
+    <Link
+      activeClass="active"
+      to={to}
+      spy={true}
+      smooth={true}
+      duration={500}
+      offset={-83}
+    >
       <RoundedButton {...props} onClick={(e) => e.preventDefault()}>
         {children}
       </RoundedButton>
@@ -70,8 +77,30 @@ export function RoundedScrollButton({ to, children, ...props }) {
 
 export const LogoScrollButton = ({ to, ...props }) => {
   return (
-    <Link activeClass="active" to={to} spy={true} smooth={true} duration={500} offset={-83}>
-      <Logo cursor="pointer"/>
+    <Link
+      activeClass="active"
+      to={to}
+      spy={true}
+      smooth={true}
+      duration={500}
+      offset={-83}
+    >
+      <Logo cursor="pointer" />
+    </Link>
+  );
+};
+
+export const HLogoScrollButton = ({ to, ...props }) => {
+  return (
+    <Link
+      activeClass="active"
+      to={to}
+      spy={true}
+      smooth={true}
+      duration={500}
+      offset={-83}
+    >
+      <HLogo cursor="pointer" />
     </Link>
   );
 };

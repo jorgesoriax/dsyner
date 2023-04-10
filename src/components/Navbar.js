@@ -15,8 +15,9 @@ import {
 } from "@chakra-ui/react";
 import { Bars3BottomRightIcon } from "@heroicons/react/24/solid";
 import {
-  HLogoScrollButton,
+  HLogoSimpleScrollButton,
   LogoScrollButton,
+  LogoSimpleScrollButton,
   RoundedButton,
   RoundedScrollButton,
 } from "./Buttons";
@@ -106,7 +107,8 @@ export default function Navbar({ data }) {
 
   return (
     <NavbarContainer>
-      <HLogoScrollButton to="hero" />
+      <HLogoSimpleScrollButton to="hero" display={{base: "none", lg: "flex"}}/>
+      <LogoSimpleScrollButton to="hero" display={{base: "flex", lg: "none"}}/>
       <Links />
       <Actions />
     </NavbarContainer>

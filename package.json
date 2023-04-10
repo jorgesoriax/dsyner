@@ -1,6 +1,6 @@
 {
-  "name": "sucinto",
-  "version": "0.1.0",
+  "name": "dsyner",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "env": "code . && start chrome http://localhost:3000/ && npm run dev",
@@ -17,7 +17,7 @@
     "@heroicons/react": "^2.0.15",
     "@next/font": "13.1.6",
     "framer-motion": "^9.0.4",
-    "next": "13.1.6",
+    "next": "^13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-scroll": "^1.8.9"

@@ -17,16 +17,16 @@ import pricingData from "@/data/pages/home/sections/pricing";
 import faqData from "@/data/pages/home/sections/faq";
 import ctaData from "@/data/pages/home/sections/cta";
 import footerData from "@/data/footer";
-import metaData from "@/data/meta"
+import meta from "@/data/meta"
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>{metaData.title}</title>
+        <title>{meta.title}</title>
         <meta
           name="description"
-          content={metaData.description}
+          content={meta.description}
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />

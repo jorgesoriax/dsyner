@@ -1,6 +1,6 @@
-import { Button, DarkMode, LightMode } from "@chakra-ui/react";
+import { Box, Button, DarkMode, LightMode } from "@chakra-ui/react";
 import { Link } from "react-scroll";
-import { Logo, HLogo } from "./Logo";
+import LogoSimple, { Logo, HLogoSimple } from "./Logo";
 
 export function RoundedButton({ children, ...props }) {
   const variantIsGhost = props.variant == "ghost";
@@ -58,49 +58,72 @@ export function RoundedButton({ children, ...props }) {
   }
 }
 
-export function RoundedScrollButton({ to, children, ...props }) {
+export function RoundedScrollButton({ to, display, children, ...props }) {
   return (
-    <Link
-      activeClass="active"
-      to={to}
-      spy={true}
-      smooth={true}
-      duration={500}
-      offset={-83}
-    >
-      <RoundedButton {...props} onClick={(e) => e.preventDefault()}>
-        {children}
-      </RoundedButton>
-    </Link>
+    <Box display={display}>
+      <Link
+        activeClass="active"
+        to={to}
+        spy={true}
+        smooth={true}
+        duration={500}
+        offset={-83}
+      >
+        <RoundedButton onClick={(e) => e.preventDefault()} {...props}>
+          {children}
+        </RoundedButton>
+      </Link>
+    </Box>
   );
 }
 
-export const LogoScrollButton = ({ to, ...props }) => {
+export const LogoScrollButton = ({ to, display, ...props }) => {
   return (
-    <Link
-      activeClass="active"
-      to={to}
-      spy={true}
-      smooth={true}
-      duration={500}
-      offset={-83}
-    >
-      <Logo cursor="pointer" />
-    </Link>
+    <Box display={display}>
+      <Link
+        activeClass="active"
+        to={to}
+        spy={true}
+        smooth={true}
+        duration={500}
+        offset={-83}
+      >
+        <Logo cursor="pointer" {...props} />
+      </Link>
+    </Box>
   );
 };
 
-export const HLogoScrollButton = ({ to, ...props }) => {
+export const LogoSimpleScrollButton = ({ to, display, ...props }) => {
   return (
-    <Link
-      activeClass="active"
-      to={to}
-      spy={true}
-      smooth={true}
-      duration={500}
-      offset={-83}
-    >
-      <HLogo cursor="pointer" />
-    </Link>
+    <Box display={display}>
+      <Link
+        activeClass="active"
+        to={to}
+        spy={true}
+        smooth={true}
+        duration={500}
+        offset={-83}
+      >
+        <LogoSimple cursor="pointer" {...props} />
+      </Link>
+    </Box>
+  );
+};
+
+export const HLogoSimpleScrollButton = ({ to, display, ...props }) => {
+  return (
+    <Box display={display}>
+      <Link
+        activeClass="active"
+        to={to}
+        spy={true}
+        smooth={true}
+        duration={500}
+        offset={-83}
+      >
+        <HLogoSimple cursor="pointer" {...props} />
+      </Link>
+    </Box>
   );
 };

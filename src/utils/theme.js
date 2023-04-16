@@ -15,7 +15,7 @@ const theme = extendTheme({
       900: "#1001bc",
     },
     altGray: {
-      darkerRGBA: "rgba(29, 29, 29, 0.98)",
+      darkerRGBA: "rgba(29, 29, 29, 0.85)",
       darker: "#1d1d1d",
       dark: "#292929",
       light: "#313131",

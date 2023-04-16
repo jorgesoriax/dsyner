@@ -1,9 +1,18 @@
-import { HStack, List, ListItem, Stack, Text, VStack } from "@chakra-ui/react";
+import {
+  HStack,
+  Link,
+  List,
+  ListItem,
+  Stack,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { RoundedButton } from "./Buttons";
 import { LgContainer } from "./Containers";
 import Description from "./Description";
 import Logo from "./Logo";
+import NextLink from "next/link";
 
 export default function Footer({ data }) {
   const SocialMedia = () => {
@@ -14,7 +23,7 @@ export default function Footer({ data }) {
         justify={{ base: "center", md: "space-between" }}
         align="center"
       >
-        <Logo/>
+        <Logo />
         <List>
           <HStack
             spacing={0}
@@ -25,7 +34,9 @@ export default function Footer({ data }) {
           >
             {data.socialMedia.map(({ title, href }, i) => (
               <ListItem key={i}>
-                <RoundedButton variant="link">{title}</RoundedButton>
+                <Link as={NextLink} href={href} isExternal>
+                  {title}
+                </Link>
               </ListItem>
             ))}
           </HStack>
@@ -57,7 +68,9 @@ export default function Footer({ data }) {
               >
                 {items.map(({ title, href }, i) => (
                   <ListItem key={i}>
-                    <RoundedButton variant="link">{title}</RoundedButton>
+                    <Link as={NextLink} href={href} isExternal>
+                      {title}
+                    </Link>
                   </ListItem>
                 ))}
               </VStack>
@@ -78,7 +91,8 @@ export default function Footer({ data }) {
           <SparklesIcon width={24} height={24} />
           <Text textAlign="center">{data.copyright}</Text>
         </HStack>
-        <List>
+        {/* TODO Añadir la documentación necesaria */}
+        {/* <List>
           <Stack
             direction={{ base: "column", md: "row" }}
             spacing={{ base: 4, md: 8 }}
@@ -86,11 +100,13 @@ export default function Footer({ data }) {
           >
             {data.secondary.map(({ title, href }, i) => (
               <ListItem key={i}>
-                <RoundedButton variant="link">{title}</RoundedButton>
+                <Link as={NextLink} href={href} isExternal>
+                  {title}
+                </Link>
               </ListItem>
             ))}
           </Stack>
-        </List>
+        </List> */}
       </Stack>
     );
   };

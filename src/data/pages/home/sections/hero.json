@@ -12,7 +12,7 @@
     },
     "actions": {
         "primary": {
-            "title": "Obtener diseño",
+            "title": "Obten tu diseño",
             "to": "pricing"
         },
         "secondary": {

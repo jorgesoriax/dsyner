@@ -17,18 +17,9 @@ import PriceCard from "../PriceCard";
 import SectionHeader from "../SectionHeader";
 
 export default function Pricing({ data }) {
-  const PriceCardsContainer = () => {
+  const PricingTabs = () => {
     return (
-      <Stack spacing={8} direction={{ base: "column", md: "row" }}>
-        {data.priceCards.map(({ ...props }, i) => (
-          <PriceCard key={i} {...props} />
-        ))}
-      </Stack>
-    );
-  };
-  const PricingTab = () => {
-    return (
-      <Tabs size="lg" w="100%" colorScheme="violet" isFitted variant="enclosed">
+      <Tabs size="lg" w="100%" colorScheme="violet" isFitted variant="line">
         <TabList>
           {data.priceTabs.categories.map(({ title }, i) => (
             <Tab key={i}>{title}</Tab>
@@ -64,8 +55,7 @@ export default function Pricing({ data }) {
         title={data.header.title}
         description={data.header.description}
       />
-      {/* <PriceCardsContainer />  */}
-      <PricingTab />
+      <PricingTabs />
     </PricingContainer>
   );
 }

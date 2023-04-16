@@ -2,20 +2,24 @@
     "aboutUs": "Somos un estudio de diseño gráfico que emplea herramientas de Intelingencia Artificial para entregar servicios más rápidos y preciosos sin dejar de lado la calidad y el propósito.",
     "socialMedia": [
         {
-            "title": "Facebook",
-            "href": "#"
-        },
-        {
-            "title": "Instragram",
-            "href": "#"
-        },
-        {
             "title": "Behance",
-            "href": "#"
+            "href": "https://www.behance.net/dsynercrea"
         },
         {
             "title": "Dribbble",
-            "href": "#"
+            "href": "https://dribbble.com/dsynercrea"
+        },
+        {
+            "title": "Instragram",
+            "href": "https://www.instagram.com/dsynercrea/"
+        },
+        {
+            "title": "Facebook",
+            "href": "https://www.facebook.com/dsynercrea/"
+        },
+        {
+            "title": "Twitter",
+            "href": "https://twitter.com/dsynercrea"
         }
     ],
     "utility": [
@@ -23,16 +27,21 @@
             "title": "contact",
             "items": [
                 {
-                    "title": "hello@sucinto.com",
-                    "href": "#"
+                    "title": "contacto@dsyner.com.mx",
+                    "href": "mailto:contacto@dsyner.com.mx"
                 },
                 {
-                    "title": "52+ 81 2345 6378",
-                    "href": "#"
+                    "title": "52+ 81 1280 2209",
+                    "href": "https://wa.me/8112802209"
                 }
             ]
         }
     ],
-    "secondary": [],
-    "copyright": "Sitio web desarrollado por Sucinto"
+    "secondary": [
+        {
+            "title": "Garantía de satisfaccion",
+            "href": "#"
+        }
+    ],
+    "copyright": "Desarrollado por dsyner"
 }

@@ -1,6 +1,7 @@
 import {
   Highlight,
   HStack,
+  Link,
   List,
   ListItem,
   Stack,
@@ -17,6 +18,7 @@ export default function PriceCard({
   description,
   features,
   price,
+  link,
   ...props
 }) {
   const Header = () => {
@@ -71,8 +73,11 @@ export default function PriceCard({
         <Features />
         <Price />
         <RoundedButton
+          as={Link}
           w="100%"
           rightIcon={<ArrowUpRightIcon width={18} height={18} />}
+          href="https://wa.me/8112802209"
+          isExternal
         >
           Obtener
         </RoundedButton>

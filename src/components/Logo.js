@@ -26,7 +26,7 @@ export default function LogoSimple({ ...props }) {
       {...props}
     >
       <Flex boxSize="100%" justify="center" align="center">
-        <Image src="./favicon-simple.svg" boxSize="40px" objectFit="contain" />
+        <Image src="./white_symbol.svg" boxSize="40px" objectFit="contain" />
       </Flex>
     </Box>
   );
@@ -41,7 +41,7 @@ export function HLogoSimple({ ...props }) {
       {...props}
     >
       <Flex boxSize="100%" justify="center" align="center">
-        <Image src="./w-horizontal-logo.svg" w="170px" objectFit="cover" />
+        <Image src="./white_horizontal_logo.svg" w="170px" objectFit="cover" />
       </Flex>
     </Box>
   );

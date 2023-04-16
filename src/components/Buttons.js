@@ -1,6 +1,6 @@
-import { Box, Button, DarkMode, LightMode } from "@chakra-ui/react";
+import { Box, Button, DarkMode, LightMode, Text } from "@chakra-ui/react";
 import { Link } from "react-scroll";
-import LogoSimple, { Logo, HLogoSimple } from "./Logo";
+import Logo from "./Logo";
 
 export function RoundedButton({ children, ...props }) {
   const variantIsGhost = props.variant == "ghost";
@@ -77,53 +77,17 @@ export function RoundedScrollButton({ to, display, children, ...props }) {
   );
 }
 
-export const LogoScrollButton = ({ to, display, ...props }) => {
+export const LogoScrollButton = ({ to, variant }) => {
   return (
-    <Box display={display}>
-      <Link
-        activeClass="active"
-        to={to}
-        spy={true}
-        smooth={true}
-        duration={500}
-        offset={-83}
-      >
-        <Logo cursor="pointer" {...props} />
-      </Link>
-    </Box>
-  );
-};
-
-export const LogoSimpleScrollButton = ({ to, display, ...props }) => {
-  return (
-    <Box display={display}>
-      <Link
-        activeClass="active"
-        to={to}
-        spy={true}
-        smooth={true}
-        duration={500}
-        offset={-83}
-      >
-        <LogoSimple cursor="pointer" {...props} />
-      </Link>
-    </Box>
-  );
-};
-
-export const HLogoSimpleScrollButton = ({ to, display, ...props }) => {
-  return (
-    <Box display={display}>
-      <Link
-        activeClass="active"
-        to={to}
-        spy={true}
-        smooth={true}
-        duration={500}
-        offset={-83}
-      >
-        <HLogoSimple cursor="pointer" {...props} />
-      </Link>
-    </Box>
+    <Link
+      activeClass="active"
+      to={to}
+      spy={true}
+      smooth={true}
+      duration={500}
+      offset={-83}
+    >
+      <Logo variant={variant} cursor="pointer" />
+    </Link>
   );
 };

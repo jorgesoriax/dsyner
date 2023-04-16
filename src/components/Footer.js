@@ -3,7 +3,7 @@ import { SparklesIcon } from "@heroicons/react/24/solid";
 import { RoundedButton } from "./Buttons";
 import { LgContainer } from "./Containers";
 import Description from "./Description";
-import { HLogoSimple } from "./Logo";
+import Logo from "./Logo";
 
 export default function Footer({ data }) {
   const SocialMedia = () => {
@@ -14,7 +14,7 @@ export default function Footer({ data }) {
         justify={{ base: "center", md: "space-between" }}
         align="center"
       >
-        <HLogoSimple />
+        <Logo/>
         <List>
           <HStack
             spacing={0}

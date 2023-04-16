@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   Drawer,
   DrawerBody,
@@ -10,20 +10,24 @@ import {
   Flex,
   HStack,
   IconButton,
+  useBreakpointValue,
   useDisclosure,
   VStack,
 } from "@chakra-ui/react";
 import { Bars3BottomRightIcon } from "@heroicons/react/24/solid";
 import {
-  HLogoSimpleScrollButton,
   LogoScrollButton,
-  LogoSimpleScrollButton,
   RoundedButton,
   RoundedScrollButton,
 } from "./Buttons";
-import { FullContainer, LgContainer } from "./Containers";
+import { FullContainer } from "./Containers";
 
 export default function Navbar({ data }) {
+  const LogoScrollButtonVariant = useBreakpointValue({
+    base: "symbol",
+    lg: "",
+  });
+
   const MobileDrawer = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = React.useRef();
@@ -77,12 +81,13 @@ export default function Navbar({ data }) {
   const Actions = () => {
     return (
       <HStack>
-        <RoundedScrollButton to={data.cta.to}>{data.cta.title}</RoundedScrollButton>
+        <RoundedScrollButton to={data.cta.to}>
+          {data.cta.title}
+        </RoundedScrollButton>
         <MobileDrawer />
       </HStack>
     );
   };
-
   const NavbarContainer = ({ children }) => {
     return (
       <FullContainer
@@ -107,8 +112,7 @@ export default function Navbar({ data }) {
 
   return (
     <NavbarContainer>
-      <HLogoSimpleScrollButton to="hero" display={{base: "none", lg: "flex"}}/>
-      <LogoSimpleScrollButton to="hero" display={{base: "flex", lg: "none"}}/>
+      <LogoScrollButton to="hero" variant={LogoScrollButtonVariant} />
       <Links />
       <Actions />
     </NavbarContainer>

@@ -8,6 +8,7 @@ import Pricing from "@/components/sections/Pricing";
 import FAQ from "@/components/sections/FAQ";
 import CTA from "@/components/sections/CTA";
 import Footer from "@/components/Footer";
+import Portfolio from "@/components/sections/Portfolio";
 
 import navbarData from "@/data/pages/home/navbar";
 import heroData from "@/data/pages/home/sections/hero";
@@ -17,6 +18,7 @@ import pricingData from "@/data/pages/home/sections/pricing";
 import faqData from "@/data/pages/home/sections/faq";
 import ctaData from "@/data/pages/home/sections/cta";
 import footerData from "@/data/footer";
+import portfolioData from "@/data/pages/home/sections/portfolio"
 import meta from "@/data/meta"
 
 export default function Home() {
@@ -36,6 +38,7 @@ export default function Home() {
       <Navbar data={navbarData} />
       <Hero data={heroData} />
       <Features data={featuresData} />
+      <Portfolio data={portfolioData}/>
       <Process data={processData} />
       <Pricing data={pricingData} />
       <CTA data={ctaData} />

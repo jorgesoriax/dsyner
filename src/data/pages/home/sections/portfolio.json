@@ -1,0 +1,28 @@
+{
+    "header": {
+        "title": "Un vistazo de nuestro trabajo",
+        "description": "Potencia tus emprendimientos y proyectos con diseños personalizados a tu medida."
+    },
+    "projects": [
+        {
+            "title": "logos",
+            "cover": "./static/images/portfolio/project-01.jpg",
+            "alt": "Logo de diferentees proyectos"
+        },
+        {
+            "title": "cards",
+            "cover": "./static/images/portfolio/project-02.jpg",
+            "alt": "Tarjetas de presentación"
+        },
+        {
+            "title": "instagram-stories",
+            "cover": "./static/images/portfolio/project-03.jpg",
+            "alt": "Historias de Instagram"
+        },
+        {
+            "title": "instagram-profile",
+            "cover": "./static/images/portfolio/project-04.jpg",
+            "alt": "Perfiles de Instagram"
+        }
+    ]
+}

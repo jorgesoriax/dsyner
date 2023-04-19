@@ -5,22 +5,22 @@
     },
     "projects": [
         {
-            "title": "logos",
+            "title": "Logotipos",
             "cover": "./static/images/portfolio/project-01.jpg",
             "alt": "Logo de diferentees proyectos"
         },
         {
-            "title": "cards",
+            "title": "Tarjetas de presentación",
             "cover": "./static/images/portfolio/project-02.jpg",
             "alt": "Tarjetas de presentación"
         },
         {
-            "title": "instagram-stories",
+            "title": "Historias de Instagram",
             "cover": "./static/images/portfolio/project-03.jpg",
             "alt": "Historias de Instagram"
         },
         {
-            "title": "instagram-profile",
+            "title": "Perfiles de Instagram",
             "cover": "./static/images/portfolio/project-04.jpg",
             "alt": "Perfiles de Instagram"
         }

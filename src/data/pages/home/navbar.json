@@ -5,11 +5,15 @@
             "to": "features"
         },
         {
+            "title": "Portafolio",
+            "to": "portfolio"
+        },
+        {
             "title": "Proceso",
             "to": "process"
         },
         {
-            "title": "Precios",
+            "title": "Servicios",
             "to": "pricing"
         },
         {

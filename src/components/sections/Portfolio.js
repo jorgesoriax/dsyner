@@ -104,7 +104,7 @@ export default function Portfolio({ data }) {
   };
   const PortfolioContainer = ({ children }) => {
     return (
-      <LgContainer>
+      <LgContainer id="portfolio">
         <VStack>{children}</VStack>
       </LgContainer>
     );

@@ -1,6 +1,7 @@
-import { Heading, HStack, Stack, Text, VStack } from "@chakra-ui/react";
+import { Heading, HStack, Link, Stack, Text, VStack } from "@chakra-ui/react";
 import { RoundedButton } from "../Buttons";
 import { LgContainer } from "../Containers";
+import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
 export default function CTA({ data }) {
   const TextContent = () => {
@@ -15,7 +16,11 @@ export default function CTA({ data }) {
         >
           {data.textContent.title}
         </Heading>
-        <Text w="100%" color="whiteAlpha.700" textAlign={{ base: "center", md: "left" }}>
+        <Text
+          w="100%"
+          color="whiteAlpha.700"
+          textAlign={{ base: "center", md: "left" }}
+        >
           {data.textContent.description}
         </Text>
       </VStack>
@@ -24,9 +29,13 @@ export default function CTA({ data }) {
   const Actions = () => {
     return (
       <RoundedButton
+        as={Link}
         colorScheme="gray"
         color="violet.500"
         fontWeight="semibold"
+        rightIcon={<ArrowUpRightIcon width={18} height={18} />}
+        href={data.actions.href}
+        isExternal
       >
         {data.actions.title}
       </RoundedButton>

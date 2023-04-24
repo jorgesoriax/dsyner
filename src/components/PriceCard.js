@@ -72,7 +72,7 @@ export default function PriceCard({
       <VStack w="100%" spacing={{ base: 2, md: 4 }}>
         <Features />
         <Price />
-        <RoundedButton
+        {/* <RoundedButton
           as={Link}
           w="100%"
           rightIcon={<ArrowUpRightIcon width={18} height={18} />}
@@ -80,7 +80,7 @@ export default function PriceCard({
           isExternal
         >
           Obtener
-        </RoundedButton>
+        </RoundedButton> */}
       </VStack>
     </PriceCardContainer>
   );

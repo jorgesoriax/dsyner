@@ -4,6 +4,7 @@
         "description": "Si no encuentras lo que buscas, por favor, escríbenos y con gusto te ofreceremos soluciones personalizadas."
     },
     "actions": {
-        "title": "Solicitar otro servicio"
+        "title": "Solicitar otro servicio",
+        "href": "https://wa.me/8112802209?text=Hola, estoy buscando un servicio diferente..."
     }
 }

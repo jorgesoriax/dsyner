@@ -20,6 +20,7 @@ const theme = extendTheme({
       dark: "#292929",
       light: "#313131",
       lighter: "#545454",
+      gradient: "linear-gradient(0deg, rgba(29,29,29,1) 0%, rgba(29,29,29,0) 100%)"
     },
   },
   fonts: {

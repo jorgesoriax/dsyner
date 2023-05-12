@@ -1,27 +1,29 @@
+import React from "react";
 import {
-  Flex,
+  Box,
+  Collapse,
   Grid,
   GridItem,
   HStack,
   Image,
   Modal,
   ModalBody,
-  ModalCloseButton,
   ModalContent,
   ModalFooter,
-  ModalHeader,
   ModalOverlay,
-  Text,
   VStack,
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import { LgContainer } from "../Containers";
+import { FullContainer } from "../Containers";
 import SectionHeader from "../SectionHeader";
 import { RoundedButton } from "../Buttons";
 import CrystalBox from "../CrystalBox";
 
 export default function Portfolio({ data }) {
+  const [show, setShow] = React.useState(false);
+  const handleToggle = () => setShow(!show);
+
   const Project = ({ title, cover, alt }) => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const showModal = useBreakpointValue({ base: false, lg: true });
@@ -68,8 +70,8 @@ export default function Portfolio({ data }) {
             src={cover}
             alt={alt}
             rounded="2xl"
-            onClick={onOpen}
-            cursor="pointer"
+            // onClick={onOpen}
+            // cursor="pointer"
           />
           <ImageModal />
         </>
@@ -88,25 +90,53 @@ export default function Portfolio({ data }) {
     }
   };
   const ProjectGrid = () => {
+    const GradientBox = () => {
+      return (
+        <Box
+          bg="altGray.gradient"
+          pos="absolute"
+          w="100%"
+          h="50%"
+          bottom={0}
+          display={show ? "none" : "block"}
+        />
+      );
+    };
+
     return (
-      <Grid
-        w="100%"
-        templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
-        gap={4}
-      >
-        {data.projects.map(({ ...props }, i) => (
-          <GridItem key={i}>
-            <Project {...props} />
-          </GridItem>
-        ))}
-      </Grid>
+      <VStack spacing={8}>
+        <Collapse startingHeight={750} in={show}>
+          <Box h="100%" pos="relative">
+            <Grid
+              w="100%"
+              templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
+              gap={4}
+              overflow="hidden"
+            >
+              {data.projects.map(({ ...props }, i) => (
+                <GridItem key={i}>
+                  <Project {...props} />
+                </GridItem>
+              ))}
+            </Grid>
+            <GradientBox />
+          </Box>
+        </Collapse>
+        <RoundedButton
+          mt={4}
+          aria-label="Show more projects"
+          onClick={handleToggle}
+        >
+          {show ? "Okey, muestrame menos" : "Dejame ver más"}
+        </RoundedButton>
+      </VStack>
     );
   };
   const PortfolioContainer = ({ children }) => {
     return (
-      <LgContainer id="portfolio">
-        <VStack>{children}</VStack>
-      </LgContainer>
+      <FullContainer id="portfolio">
+        <VStack spacing={0}>{children}</VStack>
+      </FullContainer>
     );
   };
 

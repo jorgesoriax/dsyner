@@ -23,6 +23,11 @@
             "title": "Perfiles de Instagram",
             "cover": "./static/images/portfolio/project-04.jpg",
             "alt": "Perfiles de Instagram"
+        },
+        {
+            "title": "Serestech | Retail de laptops",
+            "cover": "./static/images/portfolio/serestech.jpg",
+            "alt": ""
         }
     ]
 }

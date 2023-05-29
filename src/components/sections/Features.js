@@ -1,5 +1,4 @@
 import {
-  Flex,
   Grid,
   GridItem,
   Image,
@@ -10,22 +9,22 @@ import {
 import { LgContainer } from "../Containers";
 import CrystalBox from "../CrystalBox";
 import SectionHeader from "../SectionHeader";
+import { ForwardIcon } from "@heroicons/react/24/solid";
+
 
 export default function Features({ data }) {
-  const Feature = ({ title, description, image }) => {
+  const FeatureItem = ({ title, description, image }) => {
     return (
       <Stack
         direction={{ base: "column", md: "row" }}
         spacing={8}
         align="center"
       >
-        <CrystalBox boxSize="150px" minW="150px">
-          <Flex boxSize="100%" align="center" justify="center">
-            <Image src={image} alt="temp" boxSize="100px" />
-          </Flex>
+        <CrystalBox boxSize="100px" minW="100px">
+          <Image src={image} alt="temp" boxSize="100%" />
         </CrystalBox>
         <Stack>
-          <Text textAlign={{base: "center", md: "left"}} fontSize="xl">
+          <Text textAlign={{ base: "center", md: "left" }} fontSize="xl">
             {title}
           </Text>
           <Text textAlign={{ base: "center", md: "initial" }}>
@@ -35,7 +34,7 @@ export default function Features({ data }) {
       </Stack>
     );
   };
-  const FeatureGrid = () => {
+  const Features = () => {
     return (
       <Grid
         templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(2, 1fr)" }}
@@ -43,7 +42,7 @@ export default function Features({ data }) {
       >
         {data.features.map(({ ...props }, i) => (
           <GridItem key={i}>
-            <Feature {...props} />
+            <FeatureItem {...props} />
           </GridItem>
         ))}
       </Grid>
@@ -63,7 +62,7 @@ export default function Features({ data }) {
         title={data.header.title}
         description={data.header.description}
       />
-      <FeatureGrid />
+      <Features />
     </FeaturesContainer>
   );
 }

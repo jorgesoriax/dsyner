@@ -9,7 +9,7 @@
                 "title": "Identidad",
                 "services": [
                     {
-                        "title": "Logotipo",
+                        "title": "Logotipo básico",
                         "description": "Una identidad para tu marca inspirada en tu mensaje.",
                         "features": [
                             "Archivos originales",
@@ -17,7 +17,13 @@
                             "Manual de uso",
                             "Presentación"
                         ],
-                        "price": "$ 500 MXN"
+                        "price": "$599 MXN"
+                    },
+                    {
+                        "title": "Logotipo estándar",
+                        "description": "",
+                        "features": [],
+                        "price": "$1299 MX"
                     },
                     {
                         "title": "Tarjeta de presentación",
@@ -26,7 +32,7 @@
                             "Archivos originales",
                             "Manual de uso"
                         ],
-                        "price": "****"
+                        "price": "$799 MX"
                     },
                     {
                         "title": "Brochure",
@@ -35,7 +41,7 @@
                             "Archivos originales",
                             "Manual de uso"
                         ],
-                        "price": "****"
+                        "price": "$889 MX"
                     }
                 ]
             },
@@ -43,38 +49,10 @@
                 "title": "Web",
                 "services": [
                     {
-                        "title": "Diseño de página web",
-                        "description": "Dale forma a tu presencia online.",
-                        "features": [
-                            "UI Kit",
-                            "Archivos originales"
-                        ],
-                        "price": "****"
-                    },
-                    {
-                        "title": "Redes sociales",
-                        "description": "Expresa tu marca con tu comunidad.",
-                        "features": [
-                            "Imagen de perfil",
-                            "Historias destacadas",
-                            "3-6 publicaciones",
-                            "Manual de uso"
-                        ],
-                        "price": "****"
-                    }
-                ]
-            },
-            {
-                "title": "Gráficos",
-                "services": [
-                    {
-                        "title": "Ilustración",
-                        "description": "Da vida a tu contenido.",
-                        "features": [
-                            "Optimización para impresión",
-                            "Manual de uso"
-                        ],
-                        "price": "****"
+                        "title": "Landing page",
+                        "description": "Un lugar en donde pueden conocerte.",
+                        "features": [],
+                        "price": "$1499 MX"
                     }
                 ]
             }

@@ -33,7 +33,7 @@ export default function PriceCard({
   };
   const Features = () => {
     return (
-      <List w="100%" pb={{ base: 8, md: 16 }} px={{base: 0, md: 4}}>
+      <List w="100%" pb={{ base: 8, md: 16 }} px={{ base: 0, md: 4 }}>
         {features.map((feature, i) => (
           <ListItem key={i}>
             <HStack align="start">
@@ -55,7 +55,7 @@ export default function PriceCard({
 
   const PriceCardContainer = ({ children }) => {
     return (
-      <CrystalBox maxW="250px" {...props}>
+      <CrystalBox maxW="250px" variant="sm" {...props}>
         <VStack
           spacing={{ base: 4, md: 8 }}
           justify="space-between"

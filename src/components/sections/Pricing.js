@@ -28,10 +28,16 @@ export default function Pricing({ data }) {
         <TabPanels>
           {data.priceTabs.categories.map((item, i) => (
             <TabPanel key={i} px={0} pt={8} pb={0}>
-              <Grid templateColumns={{base: "repeat(1, 1fr)", md: "repeat(3, 1fr)"}} gap={8}>
+              <Grid
+                templateColumns={{
+                  base: "repeat(1, 1fr)",
+                  md: "repeat(3, 1fr)",
+                }}
+                gap={8}
+              >
                 {item.services.map(({ ...props }, i) => (
                   <GridItem key={i}>
-                    <PriceCard {...props} maxW="100%" h="100%"/>
+                    <PriceCard {...props} maxW="100%" h="100%" />
                   </GridItem>
                 ))}
               </Grid>

@@ -1,4 +1,5 @@
 import {
+  Box,
   Highlight,
   HStack,
   Link,
@@ -23,7 +24,7 @@ export default function PriceCard({
 }) {
   const Header = () => {
     return (
-      <VStack spacing={0}>
+      <VStack w="100%" spacing={0}>
         <Text fontSize="2xl" textAlign="center">
           {title}
         </Text>
@@ -33,22 +34,26 @@ export default function PriceCard({
   };
   const Features = () => {
     return (
-      <List w="100%" pb={{ base: 8, md: 16 }} px={{ base: 0, md: 4 }}>
-        {features.map((feature, i) => (
-          <ListItem key={i}>
-            <HStack align="start">
-              <CheckIcon width={24} height={24} />
-              <Text>{feature}</Text>
-            </HStack>
-          </ListItem>
-        ))}
-      </List>
+      <VStack w="100%" flex="auto">
+        <List w="100%" pb={{ base: 8, md: 16 }} px={{ base: 0, md: 4 }}>
+          {features.map((feature, i) => (
+            <ListItem key={i}>
+              <HStack align="start">
+                <Box>
+                  <CheckIcon width={24} height={24} />
+                </Box>
+                <Text>{feature}</Text>
+              </HStack>
+            </ListItem>
+          ))}
+        </List>
+      </VStack>
     );
   };
   const Price = () => {
     return (
       <Text w="100%" textAlign="center">
-        Desde {price}
+        Desde ${price} MXN
       </Text>
     );
   };
@@ -56,31 +61,34 @@ export default function PriceCard({
   const PriceCardContainer = ({ children }) => {
     return (
       <CrystalBox maxW="250px" variant="sm" {...props}>
-        <VStack
-          spacing={{ base: 4, md: 8 }}
-          justify="space-between"
-          boxSize="100%"
-        >
+        <VStack spacing={{ base: 4, md: 8 }} boxSize="100%">
           {children}
         </VStack>
       </CrystalBox>
     );
   };
+
+  const CTAButton = () => {
+    return (
+      <RoundedButton
+        as={Link}
+        w="100%"
+        h="50px"
+        rightIcon={<ArrowUpRightIcon width={18} height={18} />}
+        href={`https://wa.me/8126407713?text=¡Hola! Me interesa ${title}.`}
+        isExternal
+      >
+        Obtener
+      </RoundedButton>
+    );
+  };
   return (
     <PriceCardContainer>
       <Header />
-      <VStack w="100%" spacing={{ base: 2, md: 4 }}>
+      <VStack w="100%" h="100%" spacing={{ base: 2, md: 4 }}>
         <Features />
         <Price />
-        {/* <RoundedButton
-          as={Link}
-          w="100%"
-          rightIcon={<ArrowUpRightIcon width={18} height={18} />}
-          href="https://wa.me/8112802209"
-          isExternal
-        >
-          Obtener
-        </RoundedButton> */}
+        <CTAButton />
       </VStack>
     </PriceCardContainer>
   );

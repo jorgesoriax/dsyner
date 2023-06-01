@@ -10,49 +10,59 @@
                 "services": [
                     {
                         "title": "Logotipo básico",
-                        "description": "Una identidad para tu marca inspirada en tu mensaje.",
+                        "description": "Dale una identidad a tu marca.",
                         "features": [
-                            "Archivos originales",
-                            "Optimización para impresión",
-                            "Manual de uso",
-                            "Presentación"
+                           "Logo adaptable",
+                           "Archivos originales"
                         ],
-                        "price": "$599 MXN"
+                        "price": "599"
                     },
                     {
                         "title": "Logotipo estándar",
-                        "description": "",
-                        "features": [],
-                        "price": "$1299 MX"
+                        "description": "Algo más que una identidad.",
+                        "features": [
+                            "Logo adaptable",
+                            "Investigación de competencia",
+                            "Optimizado para impresión",
+                            "Presentación",
+                            "Manual de uso",
+                            "Archivos originales"
+                        ],
+                        "price": "1299"
                     },
                     {
                         "title": "Tarjeta de presentación",
-                        "description": "Brinda una primera impresión increible.",
+                        "description": "Una gran primera impresión.",
                         "features": [
-                            "Archivos originales",
-                            "Manual de uso"
+                            "Optimizado para impresión",
+                            "Archivos originales"
                         ],
-                        "price": "$799 MX"
+                        "price": "799"
                     },
                     {
                         "title": "Brochure",
                         "description": "Da a conocer tus servicios profesionales.",
                         "features": [
-                            "Archivos originales",
-                            "Manual de uso"
+                            "Optimizado para impresión",
+                            "Archivos originales"
                         ],
-                        "price": "$889 MX"
+                        "price": "889"
                     }
                 ]
             },
             {
-                "title": "Web",
+                "title": "Online",
                 "services": [
                     {
                         "title": "Landing page",
-                        "description": "Un lugar en donde pueden conocerte.",
-                        "features": [],
-                        "price": "$1499 MX"
+                        "description": "Un lugar donde darte a conocer.",
+                        "features": [
+                            "Wordpress + Divi",
+                            "Optimización SEO onpage",
+                            "Optimización de carga y rendimiento",
+                            "Archivos originales"
+                        ],
+                        "price": "1499"
                     }
                 ]
             }

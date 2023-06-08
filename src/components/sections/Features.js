@@ -9,8 +9,7 @@ import {
 import { LgContainer } from "../Containers";
 import CrystalBox from "../CrystalBox";
 import SectionHeader from "../SectionHeader";
-import { ForwardIcon } from "@heroicons/react/24/solid";
-
+import Description from "../Description";
 
 export default function Features({ data }) {
   const FeatureItem = ({ title, description, image }) => {
@@ -27,9 +26,9 @@ export default function Features({ data }) {
           <Text textAlign={{ base: "center", md: "left" }} fontSize="xl">
             {title}
           </Text>
-          <Text textAlign={{ base: "center", md: "initial" }}>
+          <Description textAlign={{ base: "center", md: "initial" }}>
             {description}
-          </Text>
+          </Description>
         </Stack>
       </Stack>
     );

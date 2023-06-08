@@ -9,13 +9,14 @@ import {
 } from "@chakra-ui/react";
 import { FullContainer } from "../Containers";
 import SectionHeader from "../SectionHeader";
+import Description from "../Description";
 
 export default function Process({ data }) {
   const Step = ({ title, description, image, isEven }) => {
     return (
-      <VStack py={{ base: 4, md: 0 }} w={{base: "100%", md: "70%"}}>
+      <VStack py={{ base: 4, md: 0 }} w={{ base: "100%", md: "70%" }}>
         <Stack
-          direction={{ base: "column", md: isEven ? "row" : "row-reverse" }}
+          direction={{ base: "column", md: "row" }}
           align="center"
           justify="center"
           spacing={8}
@@ -25,13 +26,15 @@ export default function Process({ data }) {
           </Box>
           <VStack w={{ base: "100%", md: "50%" }} justify="center" align="left">
             <Heading
-              textAlign={{ base: "center", md: isEven ? "left" : "right" }}
+              textAlign={{ base: "center", md: "left" }}
             >
               {title}
             </Heading>
-            <Text textAlign={{ base: "center", md: isEven ? "left" : "right" }}>
+            <Description
+              textAlign={{ base: "center", md: "left" }}
+            >
               {description}
-            </Text>
+            </Description>
           </VStack>
         </Stack>
       </VStack>

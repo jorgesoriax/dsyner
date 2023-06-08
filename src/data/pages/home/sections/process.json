@@ -5,19 +5,19 @@
     },
     "steps": [
         {
-            "title": "Solicitud de servicio ",
-            "description": "Completa nuestro breve formulario para que podamos conocer más sobre tus necesidades y brindarte el servicio indicado para ti.",
-            "image": "./static/images/process/form.png"
+            "title": "Descubrimiento",
+            "description": "Para desarrollar tu idea, es fundamental recopilar la máxima cantidad de información posible. Con este fin, utilizamos un breve formulario que nos ayuda a comprender tus necesidades y ofrecerte el servicio adecuado para ti.",
+            "image": "./static/images/process/discovery.png"
         },
         {
-            "title": "Manos a la obra",
-            "description": "Una vez que tu solicitud sea aprobada, solo deberás pagar el 50% del costo total y comenzaremos a trabajar en la creación de tu proyecto.",
-            "image": "./static/images/process/design.png"
+            "title": "Definición",
+            "description": "Trabajamos en colaboración con herramientas de Inteligencia Artificial que nos brindan sugerencias tanto de imágenes como de texto. Esto nos permite desarrollar una estrategia de diseño acorde a tu proyecto de manera efectiva.",
+            "image": "./static/images/process/definition.png"
         },
         {
-            "title": "Recibe tu diseño",
-            "description": "Una vez que tu diseño esté listo, te entregaremos todos los recursos necesarios listos para ser utilizados.",
-            "image": "./static/images/process/delivery.png"
+            "title": "Creación",
+            "description": "Con la información recopilada, comenzaremos el proceso de dar forma a tu nuevo diseño, contando con tu participación activa mediante revisiones constantes para asegurarnos de que avanzamos en la dirección correcta.",
+            "image": "./static/images/process/creation.png"
         }
     ]
 }

@@ -18,18 +18,15 @@ import pricingData from "@/data/pages/home/sections/pricing";
 import faqData from "@/data/pages/home/sections/faq";
 import ctaData from "@/data/pages/home/sections/cta";
 import footerData from "@/data/footer";
-import portfolioData from "@/data/pages/home/sections/portfolio"
-import meta from "@/data/meta"
+import portfolioData from "@/data/pages/home/sections/portfolio";
+import meta from "@/data/meta";
 
 export default function Home() {
   return (
     <>
       <Head>
         <title>{meta.title}</title>
-        <meta
-          name="description"
-          content={meta.description}
-        />
+        <meta name="description" content={meta.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
         <link rel="mask-icon" href="/mask-icon.svg" color="#6828DF" />
@@ -38,7 +35,7 @@ export default function Home() {
       <Navbar data={navbarData} />
       <Hero data={heroData} />
       <Features data={featuresData} />
-      <Portfolio data={portfolioData}/>
+      <Portfolio data={portfolioData} />
       <Process data={processData} />
       <Pricing data={pricingData} />
       <CTA data={ctaData} />

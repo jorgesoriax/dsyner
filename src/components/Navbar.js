@@ -10,6 +10,7 @@ import {
   Flex,
   HStack,
   IconButton,
+  Text,
   useBreakpointValue,
   useDisclosure,
   VStack,
@@ -20,14 +21,13 @@ import {
   RoundedButton,
   RoundedScrollButton,
 } from "./Buttons";
-import { FullContainer } from "./Containers";
+import DContainer from "./DContainer";
 
 export default function Navbar({ data }) {
   const LogoScrollButtonVariant = useBreakpointValue({
     base: "symbol",
     lg: "",
   });
-
   const MobileDrawer = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const btnRef = React.useRef();
@@ -78,19 +78,19 @@ export default function Navbar({ data }) {
       </HStack>
     );
   };
-  const Actions = () => {
-    return (
-      <HStack>
-        <RoundedScrollButton to={data.cta.to}>
-          {data.cta.title}
-        </RoundedScrollButton>
-        <MobileDrawer />
-      </HStack>
-    );
-  };
+  // const Actions = () => {
+  //   return (
+  //     <HStack>
+  //       <RoundedScrollButton to={data.cta.to}>
+  //         {data.cta.title}
+  //       </RoundedScrollButton>
+  //       <MobileDrawer />
+  //     </HStack>
+  //   );
+  // };
   const NavbarContainer = ({ children }) => {
     return (
-      <FullContainer
+      <DContainer
         as="nav"
         mb={0}
         py={0}
@@ -102,11 +102,12 @@ export default function Navbar({ data }) {
         backdropBlur="2px"
         borderBottom="1px"
         borderColor="altGray.dark"
+        size="full"
       >
         <HStack py={4} align="center" justify="space-between">
           {children}
         </HStack>
-      </FullContainer>
+      </DContainer>
     );
   };
 
@@ -114,7 +115,6 @@ export default function Navbar({ data }) {
     <NavbarContainer>
       <LogoScrollButton to="hero" variant={LogoScrollButtonVariant} />
       <Links />
-      <Actions />
     </NavbarContainer>
   );
 }

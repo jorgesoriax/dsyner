@@ -7,9 +7,9 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { FullContainer } from "../Containers";
-import SectionHeader from "../SectionHeader";
+import { FullContainer } from "../DContainer";
 import Description from "../Description";
+import { SectionHeader } from "../typography";
 
 export default function Process({ data }) {
   const Step = ({ title, description, image, isEven }) => {

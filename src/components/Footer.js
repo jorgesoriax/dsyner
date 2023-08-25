@@ -8,8 +8,8 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { SparklesIcon } from "@heroicons/react/24/solid";
-import { RoundedButton } from "./Buttons";
-import { LgContainer } from "./Containers";
+import { RoundedButton } from "./buttons";
+import { LgContainer } from "./DContainer";
 import Description from "./Description";
 import Logo from "./Logo";
 import NextLink from "next/link";

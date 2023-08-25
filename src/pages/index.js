@@ -34,13 +34,13 @@ export default function Home() {
       </Head>
       <Navbar data={navbarData} />
       <Hero data={heroData} />
-      <Features data={featuresData} />
+      {/* <Features data={featuresData} />
       <Portfolio data={portfolioData} />
       <Process data={processData} />
       <Pricing data={pricingData} />
       <CTA data={ctaData} />
       <FAQ data={faqData} />
-      <Footer data={footerData} />
+      <Footer data={footerData} /> */}
     </>
   );
 }

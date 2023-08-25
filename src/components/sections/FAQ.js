@@ -9,10 +9,10 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/solid";
-import { RoundedButton } from "../Buttons";
-import MdContainer, { LgContainer } from "../Containers";
+import { RoundedButton } from "../buttons";
+import MdContainer, { LgContainer } from "../DContainer";
 import Description from "../Description";
-import SectionHeader from "../SectionHeader";
+import { SectionHeader } from "../typography";
 
 export default function FAQ({data}) {
   const Question = ({ question, answer }) => {

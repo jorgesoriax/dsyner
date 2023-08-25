@@ -6,10 +6,10 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { LgContainer } from "../Containers";
+import { LgContainer } from "../DContainer";
 import CrystalBox from "../CrystalBox";
-import SectionHeader from "../SectionHeader";
 import Description from "../Description";
+import { SectionHeader } from "../typography";
 
 export default function Features({ data }) {
   const FeatureItem = ({ title, description, image }) => {

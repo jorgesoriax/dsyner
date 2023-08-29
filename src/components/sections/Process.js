@@ -7,7 +7,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { FullContainer } from "../DContainer";
+import { FullContainer } from "../DyContainer";
 import Description from "../Description";
 import { SectionHeader } from "../typography";
 

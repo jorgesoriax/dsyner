@@ -15,7 +15,7 @@ import {
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import { FullContainer } from "../DContainer";
+import { FullContainer } from "../DyContainer";
 import { RoundedButton } from "../buttons";
 import CrystalBox from "../CrystalBox";
 import { SectionHeader } from "../typography";

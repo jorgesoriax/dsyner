@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { SparklesIcon } from "@heroicons/react/24/solid";
 import { RoundedButton } from "./buttons";
-import { LgContainer } from "./DContainer";
+import { LgContainer } from "./DyContainer";
 import Description from "./Description";
 import Logo from "./Logo";
 import NextLink from "next/link";

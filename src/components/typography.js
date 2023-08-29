@@ -1,53 +1,76 @@
-import { Heading, VStack } from "@chakra-ui/react";
-import Description from "./Description";
+import { Heading, Text } from "@chakra-ui/react";
 
-export function SectionHeader({ title, description }) {
+// export function SectionHeader({ title, description }) {
+//   return (
+//     <VStack spacing={4} mb={16}>
+//       <Heading as="h2" textAlign="center">
+//         {title}
+//       </Heading>
+//       <Description textAlign="center">{description}</Description>
+//     </VStack>
+//   );
+// }
+
+export function DyHeading({ children, type, ...props }) {
+  const stylesByType = {
+    base: {
+      as: "h2",
+      size: "3xl",
+      fontWeight: "bold",
+    },
+    display: {
+      as: "h1",
+      size: "4xl",
+      fontWeight: "extrabold",
+    },
+    title: {
+      as: "h3",
+      size: "2xl",
+    },
+    subtitle: {
+      as: "h4",
+      size: "xl",
+    },
+  };
+
+  const styles = {
+    ...stylesByType.base,
+    ...(stylesByType[type] || {}),
+  };
+
   return (
-    <VStack spacing={4} mb={16}>
-      <Heading as="h2" textAlign="center">
-        {title}
-      </Heading>
-      <Description textAlign="center">{description}</Description>
-    </VStack>
+    <Heading
+      as={styles.as}
+      size={styles.size}
+      fontWeight={styles.fontWeight}
+      {...props}
+    >
+      {children}
+    </Heading>
   );
 }
-export function Display({children, ...props}) {
-    return (
-        <Heading
-          as="h1"
-          size="4xl"
-          lineHeight="none"
-          fontWeight="bold"
-          mb={8}
-          textAlign={{ base: "center", md: "left" }}
-          {...props}
-        >
-          {children}
-        </Heading>
-    )
+
+export function DyParagraph({ children, type, ...props }) {
+  const stylesByType = {
+    base: {
+      fontSize: "md",
+    },
+    description: {
+      color: "lavender.700",
+    },
+    label: {
+      fontSize: "sm",
+    },
+  };
+
+  const styles = {
+    ...stylesByType.base,
+    ...(stylesByType[type] || {}),
+  };
+
+  return (
+    <Text fontSize={styles.fontSize} color={styles.color} {...props}>
+      {children}
+    </Text>
+  );
 }
-// export function Header() {
-//     return (
-
-//     )
-// }
-// export function Title() {
-//     return (
-
-//     )
-// }
-// export function Subtitle() {
-//     return (
-
-//     )
-// }
-// export function Text() {
-//     return (
-
-//     )
-// }
-// export function Label() {
-//     return (
-
-//     )
-// }

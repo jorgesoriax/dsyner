@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/solid";
 import { RoundedButton } from "../buttons";
-import MdContainer, { LgContainer } from "../DContainer";
+import MdContainer, { LgContainer } from "../DyContainer";
 import Description from "../Description";
 import { SectionHeader } from "../typography";
 

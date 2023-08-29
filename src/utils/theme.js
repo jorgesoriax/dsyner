@@ -20,7 +20,8 @@ const theme = extendTheme({
       dark: "#292929",
       light: "#313131",
       lighter: "#545454",
-      gradient: "linear-gradient(0deg, rgba(29,29,29,1) 0%, rgba(29,29,29,0) 100%)"
+      gradient:
+        "linear-gradient(0deg, rgba(29,29,29,1) 0%, rgba(29,29,29,0) 100%)",
     },
     burple: {
       100: "#FAF2FF",
@@ -67,7 +68,7 @@ const theme = extendTheme({
   styles: {
     global: (props) => ({
       "html, body": {
-        backgroundColor: props.colorMode === "dark" ? "#1D1D1D" : "white",
+        // backgroundColor: props.colorMode === "dark" ? "#1D1D1D" : "white",
         fontSize: 16,
       },
     }),

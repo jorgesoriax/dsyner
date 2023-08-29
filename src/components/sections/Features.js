@@ -6,7 +6,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { LgContainer } from "../DContainer";
+import { LgContainer } from "../DyContainer";
 import CrystalBox from "../CrystalBox";
 import Description from "../Description";
 import { SectionHeader } from "../typography";

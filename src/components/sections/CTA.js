@@ -1,6 +1,6 @@
 import { Heading, HStack, Link, Stack, Text, VStack } from "@chakra-ui/react";
 import { RoundedButton } from "../buttons";
-import { LgContainer } from "../DContainer";
+import { LgContainer } from "../DyContainer";
 import { ArrowUpRightIcon } from "@heroicons/react/24/solid";
 
 export default function CTA({ data }) {

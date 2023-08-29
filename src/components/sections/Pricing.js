@@ -12,7 +12,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { LgContainer } from "../DContainer";
+import { LgContainer } from "../DyContainer";
 import PriceCard from "../PriceCard";
 import { SectionHeader } from "../typography";
 

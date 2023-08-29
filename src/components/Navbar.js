@@ -20,8 +20,8 @@ import {
   LogoScrollButton,
   RoundedButton,
   RoundedScrollButton,
-} from "./Buttons";
-import DContainer from "./DContainer";
+} from "./buttons";
+import DContainer from "./DyContainer";
 
 export default function Navbar({ data }) {
   const LogoScrollButtonVariant = useBreakpointValue({

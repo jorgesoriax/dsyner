@@ -1,3 +1,4 @@
+
 import {
   Box,
   Highlight,
@@ -10,7 +11,6 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { ArrowUpRightIcon, CheckIcon } from "@heroicons/react/24/solid";
-import { RoundedButton } from "./buttons";
 import CrystalBox from "./CrystalBox";
 import Description from "./Description";
 

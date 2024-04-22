@@ -1,15 +1,7 @@
-import {
-  Grid,
-  GridItem,
-  Image,
-  Stack,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
-import { LgContainer } from "../DyContainer";
+import { Grid, GridItem, Image, Stack, Text, VStack } from "@chakra-ui/react";
 import CrystalBox from "../CrystalBox";
-import Description from "../Description";
-import { SectionHeader } from "../typography";
+import { DyHeading, DyParagraph, DySectionHeader } from "../typography/typography";
+import DyContainer from "../layout/DyContainer_old";
 
 export default function Features({ data }) {
   const FeatureItem = ({ title, description, image }) => {
@@ -23,12 +15,9 @@ export default function Features({ data }) {
           <Image src={image} alt="temp" boxSize="100%" />
         </CrystalBox>
         <Stack>
-          <Text textAlign={{ base: "center", md: "left" }} fontSize="xl">
-            {title}
-          </Text>
-          <Description textAlign={{ base: "center", md: "initial" }}>
-            {description}
-          </Description>
+          {/* <Text textAlign={{ base: "center", md: "left" }} fontSize="xl"></Text> */}
+          <DyHeading type="subtitle">{title}</DyHeading>
+          <DyParagraph type="description">{description}</DyParagraph>
         </Stack>
       </Stack>
     );
@@ -49,17 +38,18 @@ export default function Features({ data }) {
   };
   const FeaturesContainer = ({ children }) => {
     return (
-      <LgContainer id="features">
+      <DyContainer id="features" size="lg">
         <VStack>{children}</VStack>
-      </LgContainer>
+      </DyContainer>
     );
   };
 
   return (
     <FeaturesContainer>
-      <SectionHeader
+      <DySectionHeader
         title={data.header.title}
         description={data.header.description}
+        variant="light"
       />
       <Features />
     </FeaturesContainer>

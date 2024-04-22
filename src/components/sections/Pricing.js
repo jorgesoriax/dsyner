@@ -12,9 +12,9 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { LgContainer } from "../DyContainer";
+import { LgContainer } from "../layout/DyContainer_old";
 import PriceCard from "../PriceCard";
-import { SectionHeader } from "../typography";
+import { SectionHeader } from "../typography/typography";
 
 export default function Pricing({ data }) {
   const PricingTabs = () => {

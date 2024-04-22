@@ -15,10 +15,10 @@ import {
   useBreakpointValue,
   useDisclosure,
 } from "@chakra-ui/react";
-import { FullContainer } from "../DyContainer";
-import { RoundedButton } from "../buttons";
+import { FullContainer } from "../layout/DyContainer_old";
+import { RoundedButton } from "../forms/DyButtonOld";
 import CrystalBox from "../CrystalBox";
-import { SectionHeader } from "../typography";
+import { SectionHeader } from "../typography/typography";
 
 export default function Portfolio({ data }) {
   const [show, setShow] = React.useState(false);

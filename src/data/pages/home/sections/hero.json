@@ -1,23 +1,16 @@
 {
     "textContent": {
-        "header": {
-            "text": "Consigue un diseño único en 72hrs",
-            "highlight": [
-                "diseño",
-                "único"
-            ]
-        },
-        "caption": "Estudio de diseño gráfico potenciado por IA.",
-        "description": "Somos un estudio de diseño gráfico que emplea herramientas de Inteligencia Artificial para entregar servicios más rápidos y precisos sin dejar de lado la calidad y el propósito."
+        "heading": "Creatividad potenciada para elevar tu identidad",
+        "body": "Estudio de diseño gráfico que emplea herramientas de Inteligencia Artificial para entregar resultados más rápidos, conservando la coherencia y el propósito."
     },
     "actions": {
         "primary": {
-            "title": "Obten tu diseño",
-            "to": "pricing"
+            "title": "¡Hablemos!",
+            "to": "/"
         },
         "secondary": {
-            "title": "Muéstrame cómo funciona",
-            "to": "process"
+            "title": "Ver portafolio",
+            "to": "portfolio"
         }
     },
     "heroImage": "./static/images/hero.jpg"

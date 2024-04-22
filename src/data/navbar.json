@@ -9,20 +9,18 @@
             "to": "portfolio"
         },
         {
-            "title": "Proceso",
-            "to": "process"
-        },
-        {
             "title": "Servicios",
-            "to": "pricing"
+            "to": "services"
         },
         {
             "title": "FAQ",
             "to": "faq"
         }
     ],
-    "cta": {
-        "title": "Obten tu diseño",
-        "to": "pricing"
-    }
+    "cta": [
+        {
+            "title": "Obten tu diseño",
+            "to": "pricing"
+        }
+    ]
 }

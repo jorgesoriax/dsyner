@@ -19,12 +19,34 @@
                     "href": "https://wa.me/8126407713"
                 }
             ]
+        },
+        {
+            "title": "HOLA",
+            "items": [
+                {
+                    "title": "X",
+                    "href": "mailto:contacto@dsyner.com.mx"
+                },
+                {
+                    "title": "X",
+                    "href": "https://wa.me/8126407713"
+                }
+            ]
         }
     ],
     "secondary": [
         {
-            "title": "Garantía de satisfaccion",
-            "href": "#"
+            "title": "Póliticas",
+            "items": [
+                {
+                    "title": "A SAMPLE",
+                    "href": "asd"
+                },
+                {
+                    "title": "B SAMPLE",
+                    "href": "das"
+                }
+            ]
         }
     ],
     "copyright": "Desarrollado por dsyner"
